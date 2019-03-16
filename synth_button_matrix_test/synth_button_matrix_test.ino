@@ -181,11 +181,15 @@ int checkMatrix(){//can store this output as global "last state" for all inputs 
   int num_cols = 2; int num_rows = 4;
   int cols[num_cols] = {COL_1, COL_2}; int rows[num_rows] = {ROW_1, ROW_2, ROW_3, ROW_4};
   for(int col = 0; col < num_cols; col++){//in this configuration, col1, row1 will be the rightmost bit 
+    if(col > 0){//on a later loop, need to waste time to avoid catching floating input. IDK why this happens lol.
+  delay(.1);//to waste time, i think i'm switching too fast for the diodes to handle maybe and the line is hanging and i'm picking it up
+      }//THIS WORKED, WAS INDEED SWITCHING TOO FAST FOR DIODES OR THERE WAS CAPACITANCE. spec sheet says good up to 100mhz, maybe i got bunk diodes
     digitalWrite(cols[col], HIGH);//pull column high
     for(int row = 0; row < num_rows; row++){
       inputs |= digitalRead(rows[row])<<(col*num_rows+row);
       }
     digitalWrite(cols[col], LOW);//pull column low
+   
     }
    // Serial.write(inputs);
   return inputs;
@@ -199,9 +203,16 @@ void checkNeckInputs(int in){//neck inputs are col1, rows 1-4, bits are inverted
   if(sum != fretCount){//neck state has changed, change the note
   //  Serial.print("Setting to " + sum);
     fretCount = sum;
-    //for(String_t str : Strings){
-      Strings[0].changeNote(global_root, fretCount);
-     // }
+    for(int i = 0; i < 4; i++){//this might be causing the issue
+      Strings[i].changeNote(global_root, fretCount); //maybe split this so it all gets done in here, with the starting and stopping happening synchronously instead of delayed between, possibly a fix to "losing" notes when you go to a new root
+      //check if they're playing, use array of bools to keep track? loop through it, if it's true, access that string and do the thing. 3 distinct loops, so they stop and start at the same time. doing it at different times is what caused the collision
+      //for the ones that are:
+        //stop playing
+        //change note
+        //start playing
+      //for the ones that aren't:
+        //change note
+      }
     }
   }
 void checkBodyInputs(int in){
@@ -235,9 +246,9 @@ void checkBodyInputs(int in){
     }*/
 void checkInputs(){
   int button_states = checkMatrix();
-      checkNeckInputs(button_states); //we always check our neck inputs
+      //checkNeckInputs(button_states); //we always check our neck inputs
   if(button_states != previous_states){//there was a change, process it
-      //checkNeckInputs(button_states);
+      checkNeckInputs(button_states);
       checkBodyInputs(button_states);
       Serial.print(button_states);
     previous_states = button_states;//update the new states
