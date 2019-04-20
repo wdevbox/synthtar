@@ -17,7 +17,7 @@
 #define ROW_4 12
 //MIDI DEFINITIONS
 #define DEFAULT_ROOT 52 //default root note
-#define DEFAULT_INST 30 //default instrument
+#define DEFAULT_INST 31 //default instrument
 //function + class declarations...
 void initVS1053();
 void midiInitStuff();
@@ -46,7 +46,7 @@ int prev_state = 0;
 class String_t{//need to be able to adjust volume
   public :
   bool isPlayingSound; uint8_t note; uint8_t tuning; //something has isPlaying reserved in teensy...
-  //uint8_ts here reduces mem usage by quite a bit
+  //uint8_ts here reduces mem usage by quite a bit, except not really because 32 bit mcu
   String_t(int r, int t, int i){
     note = r + t; //because by default on boot the fretCount is 0
     tuning = t;
@@ -61,7 +61,7 @@ class String_t{//need to be able to adjust volume
       }
     if(!isPlayingSound){//this isn't triggering for some reason
       note = root + tuning + fret;
-      Serial.print("Note:" + note);
+     // Serial.print("Note:" + note);
       }
     }
     void changeTuning(int tune){//rework this
@@ -70,14 +70,14 @@ class String_t{//need to be able to adjust volume
       }
     bool startPlaying(){
       //send the midi command
-     // if(isPlayingSound) return false; //couldn't start playing because it's already playing
+      if(isPlayingSound) return false; //couldn't start playing because it's already playing
       midiNoteOn(0,note,127); //start playing
       isPlayingSound = true; //set val to true
       return true;
       }
     bool stopPlaying(){
       //send the midi command
-     // if(!isPlayingSound) return false; //couldn't stop playing because it wasn't playing
+      if(!isPlayingSound) return false; //couldn't stop playing because it wasn't playing
       midiNoteOff(0,note,0);//is playing, turn off, set playing to false, return true to indicate success
       isPlayingSound = false;
       return true;
@@ -112,6 +112,7 @@ void initPeripherals(){//initialize all input pins, also in the future may be to
   pinMode(ROW_2, INPUT); //init row 2
   pinMode(ROW_3, INPUT); //init row 3
   pinMode(ROW_4, INPUT); //init row 4
+  pinMode(18, OUTPUT); digitalWrite(18, 0); //set the output high to turn on the AND gate and see if the 3.3v logic will trigger it. This can be thought of as power indicator or something
   }
 void midiInitStuff(){
     midiSetChannelBank(0, VS1053_BANK_MELODY); //set instrument bank to melody
@@ -181,10 +182,19 @@ int checkMatrix(){//can store this output as global "last state" for all inputs 
   int num_cols = 2; int num_rows = 4;
   int cols[num_cols] = {COL_1, COL_2}; int rows[num_rows] = {ROW_1, ROW_2, ROW_3, ROW_4};
   for(int col = 0; col < num_cols; col++){//in this configuration, col1, row1 will be the rightmost bit 
-    if(col > 0){//on a later loop, need to waste time to avoid catching floating input. IDK why this happens lol.
-  delay(.1);//to waste time, i think i'm switching too fast for the diodes to handle maybe and the line is hanging and i'm picking it up
-      }//THIS WORKED, WAS INDEED SWITCHING TOO FAST FOR DIODES OR THERE WAS CAPACITANCE. spec sheet says good up to 100mhz, maybe i got bunk diodes
+  //  if(col > 0){//on a later loop, need to waste time to avoid catching floating input. IDK why this happens lol.
+  //delay(.1);//to waste time, i think i'm switching too fast for the diodes to handle maybe and the line is hanging and i'm picking it up
+
+  //    }//THIS WORKED, WAS INDEED SWITCHING TOO FAST FOR DIODES OR THERE WAS CAPACITANCE. spec sheet says good up to 100mhz, maybe i got bunk diodes
+      //only worked because the runtime of the instruction was like 2uS which was a long enough delay. 
+      //regular delay will only take ints, it will round to 0
+      //i really fucking hope this works. idk what else could be the issue
+      //it's hard to troubleshoot because it doesn't happen 100% of the time
+      //that makes me think it might be electrical. ugh. maybe it's getting just enough noise to trigger the high level at that delay?? it happens when my headphones are near certain things
+      //it hasn't done it since i added that delay so i think it was the case, it was getting back too fast bc the delay function awith that input does nothing mayube
     digitalWrite(cols[col], HIGH);//pull column high
+
+        delayMicroseconds(5); //how about 5 microseconds? that's long enough for the pin to discharge and for charge???
     for(int row = 0; row < num_rows; row++){
       inputs |= digitalRead(rows[row])<<(col*num_rows+row);
       }
@@ -203,16 +213,29 @@ void checkNeckInputs(int in){//neck inputs are col1, rows 1-4, bits are inverted
   if(sum != fretCount){//neck state has changed, change the note
   //  Serial.print("Setting to " + sum);
     fretCount = sum;
-    for(int i = 0; i < 4; i++){//this might be causing the issue
+    bool playing[4] = {false, false, false, false}; //we're gonna go through the strings and stop them all at once if they're playing, change all of the notes, and then restart the ones that were playing.
+    //to do that we need to know which ones are playing
+    //NEW CODE, NEED TO TEST
+    for(int i = 0; i < 4; i++){
+      playing[i] = Strings[i].isPlayingSound; //load array of active strings
+      }//check if they're playing, use array of bools to keep track? loop through it, if it's true, access that string and do the thing. 3 distinct loops, so they stop and start at the same time. doing it at different times is what caused the collision
+    for(int i = 0; i < 4; i++){//stop the ones that are playing
+      if(playing[i]){
+        Strings[i].stopPlaying();//needed to save the playing variable because this method stops it
+        }
+      }  
+      //change all notes
+    for(int i = 0; i < 4; i++){Strings[i].changeNote(global_root, fretCount);}
+        //start the playing ones again
+    for(int i = 0; i < 4; i++){if(playing[i])Strings[i].startPlaying();}
+    //END NEW CODE, BELOW IS OLD MOSTLY WORKING CODE (WITH "NOTE LOSS" BUG)
+    
+    /* //THIS IS THE OLDER CODE, KEEPING FOR ARCHIVE PURPOSES
+     for(int i = 0; i < 4; i++){//this might be causing the issue
       Strings[i].changeNote(global_root, fretCount); //maybe split this so it all gets done in here, with the starting and stopping happening synchronously instead of delayed between, possibly a fix to "losing" notes when you go to a new root
-      //check if they're playing, use array of bools to keep track? loop through it, if it's true, access that string and do the thing. 3 distinct loops, so they stop and start at the same time. doing it at different times is what caused the collision
-      //for the ones that are:
-        //stop playing
-        //change note
-        //start playing
-      //for the ones that aren't:
-        //change note
+    //basically note 1 stops and starts the original note 2, then note 2 stops and starts its new note, the original note 2 is no longer playing
       }
+      */
     }
   }
 void checkBodyInputs(int in){
@@ -254,9 +277,3 @@ void checkInputs(){
     previous_states = button_states;//update the new states
     }
   }
-  String intToHexString(int in){
-    //std::stringstream sstream;
-    //sstream << std::hex << in;
-    //std::string result = sstream.str();
-    //return result;
-    }
