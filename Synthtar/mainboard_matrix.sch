@@ -16778,6 +16778,50 @@ Dimensional Drawing</description>
 <hole x="77.46" y="33.46" drill="2.8"/>
 <hole x="77.46" y="2.54" drill="2.8"/>
 </package>
+<package name="JOYSTICK" urn="urn:adsk.eagle:footprint:6240202/1" library_version="2">
+<wire x1="5.588" y1="13.97" x2="-5.588" y2="13.97" width="0.2032" layer="21"/>
+<wire x1="4.826" y1="-11.43" x2="-4.826" y2="-11.43" width="0.2032" layer="21"/>
+<wire x1="4.826" y1="-11.43" x2="4.826" y2="-8.89" width="0.2032" layer="21"/>
+<wire x1="-4.826" y1="-11.43" x2="-4.826" y2="-8.89" width="0.2032" layer="21"/>
+<wire x1="4.826" y1="-8.89" x2="7.62" y2="-8.89" width="0.2032" layer="21"/>
+<wire x1="-4.826" y1="-8.89" x2="-7.62" y2="-8.89" width="0.2032" layer="21"/>
+<wire x1="9.525" y1="4.064" x2="9.525" y2="-4.064" width="0.2032" layer="21"/>
+<wire x1="7.62" y1="4.064" x2="7.62" y2="6.985" width="0.2032" layer="21"/>
+<wire x1="7.62" y1="-4.064" x2="7.62" y2="-8.89" width="0.2032" layer="21"/>
+<wire x1="7.62" y1="4.064" x2="9.525" y2="4.064" width="0.2032" layer="21"/>
+<wire x1="7.62" y1="-4.064" x2="9.525" y2="-4.064" width="0.2032" layer="21"/>
+<wire x1="7.62" y1="6.985" x2="5.588" y2="6.985" width="0.2032" layer="21"/>
+<wire x1="-5.588" y1="6.985" x2="-7.62" y2="6.985" width="0.2032" layer="21"/>
+<wire x1="5.588" y1="13.97" x2="5.588" y2="6.985" width="0.2032" layer="21"/>
+<wire x1="-5.588" y1="13.97" x2="-5.588" y2="6.985" width="0.2032" layer="21"/>
+<wire x1="-7.62" y1="4.826" x2="-11.176" y2="4.826" width="0.2032" layer="21"/>
+<wire x1="-7.62" y1="-4.826" x2="-11.176" y2="-4.826" width="0.2032" layer="21"/>
+<wire x1="-11.176" y1="4.826" x2="-11.176" y2="-4.826" width="0.2032" layer="21"/>
+<wire x1="-7.62" y1="4.826" x2="-7.62" y2="6.985" width="0.2032" layer="21"/>
+<wire x1="-7.62" y1="-4.826" x2="-7.62" y2="-8.89" width="0.2032" layer="21"/>
+<wire x1="-1.905" y1="7.62" x2="-0.635" y2="7.62" width="0.2032" layer="51"/>
+<wire x1="-0.635" y1="7.62" x2="0.635" y2="8.255" width="0.2032" layer="51"/>
+<wire x1="0.635" y1="7.62" x2="1.905" y2="7.62" width="0.2032" layer="51"/>
+<circle x="0" y="0" radius="0.635" width="0.2032" layer="21"/>
+<circle x="0" y="0" radius="12.7" width="0.2032" layer="51"/>
+<circle x="0.1" y="0" radius="15.0083" width="0.127" layer="51"/>
+<pad name="MOUNT1" x="-7.62" y="6.6675" drill="1.397" diameter="2.54"/>
+<pad name="MOUNT4" x="7.62" y="6.6675" drill="1.397" diameter="2.54"/>
+<pad name="MOUNT3" x="7.62" y="-6.6675" drill="1.397" diameter="2.54"/>
+<pad name="MOUNT2" x="-7.62" y="-6.6675" drill="1.397" diameter="2.54"/>
+<pad name="H3" x="2.54" y="-10.16" drill="0.889" diameter="1.778"/>
+<pad name="H2" x="0" y="-10.16" drill="0.889" diameter="1.778"/>
+<pad name="H1" x="-2.54" y="-10.16" drill="0.889" diameter="1.778"/>
+<pad name="V2" x="-10.16" y="0" drill="0.889" diameter="1.778"/>
+<pad name="V3" x="-10.16" y="-2.54" drill="0.889" diameter="1.778"/>
+<pad name="V1" x="-10.16" y="2.54" drill="0.889" diameter="1.778"/>
+<pad name="B2B" x="3.175" y="7.62" drill="1.1" diameter="1.778" shape="long"/>
+<pad name="B2A" x="-3.175" y="7.62" drill="1.1" diameter="1.778" shape="long"/>
+<pad name="B1A" x="-3.175" y="12.12" drill="1.1" diameter="1.778" shape="long"/>
+<pad name="B1B" x="3.175" y="12.12" drill="1.1" diameter="1.778" shape="long"/>
+<text x="-5.08" y="-5.08" size="1.27" layer="25">&gt;Name</text>
+<text x="-5.08" y="-6.35" size="1.27" layer="27">&gt;Value</text>
+</package>
 </packages>
 <packages3d>
 <package3d name="CP-2350" urn="urn:adsk.eagle:package:6240721/1" type="box" library_version="2">
@@ -16790,6 +16834,11 @@ Dimensional Drawing</description>
 <package3d name="LCD1602" urn="urn:adsk.eagle:package:6240760/1" type="box" library_version="2">
 <packageinstances>
 <packageinstance name="LCD1602"/>
+</packageinstances>
+</package3d>
+<package3d name="JOYSTICK" urn="urn:adsk.eagle:package:6240846/1" type="box" library_version="2">
+<packageinstances>
+<packageinstance name="JOYSTICK"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -16866,6 +16915,23 @@ Dimensional Drawing</description>
 <pin name="VDD" x="-20.32" y="17.78" length="middle" direction="sup" rot="R270"/>
 <pin name="VSS" x="-22.86" y="17.78" length="middle" direction="sup" rot="R270"/>
 </symbol>
+<symbol name="JOYSTICK" urn="urn:adsk.eagle:symbol:6239613/1" library_version="2">
+<wire x1="-7.62" y1="12.7" x2="5.08" y2="12.7" width="0.254" layer="94"/>
+<wire x1="5.08" y1="12.7" x2="5.08" y2="-15.24" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-15.24" x2="-7.62" y2="-15.24" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-15.24" x2="-7.62" y2="12.7" width="0.254" layer="94"/>
+<text x="-7.62" y="13.462" size="1.778" layer="95">&gt;Name</text>
+<text x="-7.62" y="-17.78" size="1.778" layer="96">&gt;Value</text>
+<text x="3.302" y="-7.366" size="1.778" layer="94" rot="R90">JOYSTICK</text>
+<pin name="V+" x="-10.16" y="10.16" visible="pin" length="short"/>
+<pin name="V" x="-10.16" y="7.62" visible="pin" length="short"/>
+<pin name="V-" x="-10.16" y="5.08" visible="pin" length="short"/>
+<pin name="H+" x="-10.16" y="0" visible="pin" length="short"/>
+<pin name="H" x="-10.16" y="-2.54" visible="pin" length="short"/>
+<pin name="H-" x="-10.16" y="-5.08" visible="pin" length="short"/>
+<pin name="SEL+" x="-10.16" y="-10.16" visible="pin" length="short"/>
+<pin name="SEL-" x="-10.16" y="-12.7" visible="pin" length="short"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="MIDIJACK" urn="urn:adsk.eagle:component:6241032/1" library_version="2">
@@ -16929,6 +16995,33 @@ Standard character type LCDs, available in sizes from 8x1 to 40x4!</description>
 </connects>
 <package3dinstances>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:6240760/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="JOYSTICK" urn="urn:adsk.eagle:component:6241105/1" prefix="U" library_version="2">
+<description>&lt;b&gt;Thumb Joystick&lt;/b&gt;
+Joystick commonly found in PS2 controllers. Two pots and a select switch. Adapted from Sparkfun Library (but for more common 6mm switch sticks)</description>
+<gates>
+<gate name="G$1" symbol="JOYSTICK" x="0" y="0"/>
+</gates>
+<devices>
+<device name="PTH" package="JOYSTICK">
+<connects>
+<connect gate="G$1" pin="H" pad="H2"/>
+<connect gate="G$1" pin="H+" pad="H1"/>
+<connect gate="G$1" pin="H-" pad="H3"/>
+<connect gate="G$1" pin="SEL+" pad="B1A"/>
+<connect gate="G$1" pin="SEL-" pad="B2A"/>
+<connect gate="G$1" pin="V" pad="V2"/>
+<connect gate="G$1" pin="V+" pad="V1"/>
+<connect gate="G$1" pin="V-" pad="V3"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:6240846/1"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -24391,6 +24484,9 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <part name="R19" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0204/7" package3d_urn="urn:adsk.eagle:package:23498/1" value="4.7k"/>
 <part name="P+3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device="" value="3V3"/>
 <part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="025-030X050" package3d_urn="urn:adsk.eagle:package:23631/1" value=".1uF"/>
+<part name="U1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="JOYSTICK" device="PTH" package3d_urn="urn:adsk.eagle:package:6240846/1"/>
+<part name="P+5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device="" value="3V3"/>
+<part name="SUPPLY42" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -24498,6 +24594,8 @@ p(t) = 6mA * 5v = 30mW</text>
 <text x="-43.18" y="-30.48" size="1.778" layer="91" rot="R90">contrast adjust</text>
 <text x="22.86" y="0" size="1.778" layer="91" rot="R90">backlight power</text>
 <wire x1="134.62" y1="10.16" x2="35.56" y2="10.16" width="0.1524" layer="97"/>
+<text x="-370.84" y="60.96" size="1.778" layer="91">lc adc uses 3.3v reference</text>
+<text x="-175.26" y="17.78" size="1.778" layer="91">internally this is also a 10k pot</text>
 </plain>
 <instances>
 <instance part="S1" gate="1" x="-363.22" y="114.3" rot="R180"/>
@@ -24632,10 +24730,13 @@ p(t) = 6mA * 5v = 30mW</text>
 <instance part="SUPPLY39" gate="+5V" x="-33.02" y="-10.16"/>
 <instance part="SUPPLY40" gate="GND" x="-33.02" y="-38.1"/>
 <instance part="SUPPLY41" gate="GND" x="-7.62" y="-5.08" rot="R180"/>
-<instance part="R17" gate="G$1" x="-149.86" y="81.28" rot="R180"/>
+<instance part="R17" gate="G$1" x="-149.86" y="76.2" rot="R180"/>
 <instance part="R19" gate="G$1" x="-149.86" y="71.12" rot="R180"/>
 <instance part="P+3" gate="VCC" x="-154.94" y="88.9"/>
 <instance part="C3" gate="G$1" x="-289.56" y="-33.02" rot="R90"/>
+<instance part="U1" gate="G$1" x="-152.4" y="38.1"/>
+<instance part="P+5" gate="VCC" x="-167.64" y="48.26" rot="R90"/>
+<instance part="SUPPLY42" gate="GND" x="-167.64" y="43.18" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -25001,10 +25102,15 @@ p(t) = 6mA * 5v = 30mW</text>
 <segment>
 <pinref part="R17" gate="G$1" pin="2"/>
 <pinref part="P+3" gate="VCC" pin="VCC"/>
-<wire x1="-154.94" y1="86.36" x2="-154.94" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="-154.94" y1="86.36" x2="-154.94" y2="76.2" width="0.1524" layer="91"/>
 <pinref part="R19" gate="G$1" pin="2"/>
-<wire x1="-154.94" y1="71.12" x2="-154.94" y2="81.28" width="0.1524" layer="91"/>
-<junction x="-154.94" y="81.28"/>
+<wire x1="-154.94" y1="71.12" x2="-154.94" y2="76.2" width="0.1524" layer="91"/>
+<junction x="-154.94" y="76.2"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="V+"/>
+<pinref part="P+5" gate="VCC" pin="VCC"/>
+<wire x1="-165.1" y1="48.26" x2="-162.56" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -25145,6 +25251,11 @@ p(t) = 6mA * 5v = 30mW</text>
 <segment>
 <pinref part="SUPPLY41" gate="GND" pin="GND"/>
 <pinref part="X1" gate="G$1" pin="RW"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="V-"/>
+<pinref part="SUPPLY42" gate="GND" pin="GND"/>
+<wire x1="-165.1" y1="43.18" x2="-162.56" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+5V" class="0">
@@ -25291,17 +25402,17 @@ p(t) = 6mA * 5v = 30mW</text>
 </net>
 <net name="SR_DATA" class="0">
 <segment>
-<pinref part="U$5" gate="G$1" pin="18/A4/T/SDA"/>
-<wire x1="-134.62" y1="88.9" x2="-139.7" y2="88.9" width="0.1524" layer="91"/>
-<label x="-149.86" y="88.9" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="IC1" gate="A" pin="B"/>
 <pinref part="IC1" gate="A" pin="A"/>
 <wire x1="-243.84" y1="-27.94" x2="-243.84" y2="-25.4" width="0.1524" layer="91"/>
 <wire x1="-248.92" y1="-25.4" x2="-243.84" y2="-25.4" width="0.1524" layer="91"/>
 <junction x="-243.84" y="-25.4"/>
 <label x="-251.46" y="-22.86" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$5" gate="G$1" pin="21/A7"/>
+<wire x1="-134.62" y1="81.28" x2="-147.32" y2="81.28" width="0.1524" layer="91"/>
+<label x="-149.86" y="81.28" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -25764,7 +25875,7 @@ p(t) = 6mA * 5v = 30mW</text>
 <net name="N$10" class="0">
 <segment>
 <pinref part="U$5" gate="G$1" pin="22/A8/T/PWM/SCL1"/>
-<wire x1="-134.62" y1="78.74" x2="-144.78" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="-134.62" y1="78.74" x2="-144.78" y2="76.2" width="0.1524" layer="91"/>
 <pinref part="R17" gate="G$1" pin="1"/>
 <junction x="-134.62" y="78.74"/>
 <wire x1="-134.62" y1="78.74" x2="-165.1" y2="78.74" width="0.1524" layer="91"/>
@@ -25847,6 +25958,18 @@ p(t) = 6mA * 5v = 30mW</text>
 <pinref part="U$6" gate="G$1" pin="HV1"/>
 <wire x1="-22.86" y1="15.24" x2="-35.56" y2="15.24" width="0.1524" layer="91"/>
 <label x="-33.02" y="15.24" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="A_WHAM" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="V"/>
+<wire x1="-162.56" y1="45.72" x2="-172.72" y2="45.72" width="0.1524" layer="91"/>
+<label x="-180.34" y="48.26" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$5" gate="G$1" pin="18/A4/T/SDA"/>
+<wire x1="-134.62" y1="88.9" x2="-139.7" y2="88.9" width="0.1524" layer="91"/>
+<label x="-149.86" y="88.9" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
