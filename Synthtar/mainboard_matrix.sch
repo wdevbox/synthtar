@@ -24387,6 +24387,10 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <part name="SUPPLY39" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+5V" device=""/>
 <part name="SUPPLY40" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY41" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="R17" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0204/7" package3d_urn="urn:adsk.eagle:package:23498/1" value="4.7k"/>
+<part name="R19" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0204/7" package3d_urn="urn:adsk.eagle:package:23498/1" value="4.7k"/>
+<part name="P+3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device="" value="3V3"/>
+<part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="025-030X050" package3d_urn="urn:adsk.eagle:package:23631/1" value=".1uF"/>
 </parts>
 <sheets>
 <sheet>
@@ -24628,6 +24632,10 @@ p(t) = 6mA * 5v = 30mW</text>
 <instance part="SUPPLY39" gate="+5V" x="-33.02" y="-10.16"/>
 <instance part="SUPPLY40" gate="GND" x="-33.02" y="-38.1"/>
 <instance part="SUPPLY41" gate="GND" x="-7.62" y="-5.08" rot="R180"/>
+<instance part="R17" gate="G$1" x="-149.86" y="81.28" rot="R180"/>
+<instance part="R19" gate="G$1" x="-149.86" y="71.12" rot="R180"/>
+<instance part="P+3" gate="VCC" x="-154.94" y="88.9"/>
+<instance part="C3" gate="G$1" x="-289.56" y="-33.02" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -24990,6 +24998,14 @@ p(t) = 6mA * 5v = 30mW</text>
 <pinref part="P+4" gate="VCC" pin="VCC"/>
 <wire x1="-71.12" y1="10.16" x2="-66.04" y2="10.16" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="R17" gate="G$1" pin="2"/>
+<pinref part="P+3" gate="VCC" pin="VCC"/>
+<wire x1="-154.94" y1="86.36" x2="-154.94" y2="81.28" width="0.1524" layer="91"/>
+<pinref part="R19" gate="G$1" pin="2"/>
+<wire x1="-154.94" y1="71.12" x2="-154.94" y2="81.28" width="0.1524" layer="91"/>
+<junction x="-154.94" y="81.28"/>
+</segment>
 </net>
 <net name="GND" class="0">
 <segment>
@@ -25062,6 +25078,12 @@ p(t) = 6mA * 5v = 30mW</text>
 <pinref part="IC3" gate="G$1" pin="GND"/>
 <pinref part="SUPPLY31" gate="GND" pin="GND"/>
 <wire x1="-294.64" y1="-50.8" x2="-294.64" y2="-48.26" width="0.1524" layer="91"/>
+<wire x1="-294.64" y1="-48.26" x2="-292.1" y2="-48.26" width="0.1524" layer="91"/>
+<wire x1="-292.1" y1="-48.26" x2="-292.1" y2="-38.1" width="0.1524" layer="91"/>
+<junction x="-294.64" y="-48.26"/>
+<wire x1="-292.1" y1="-38.1" x2="-284.48" y2="-38.1" width="0.1524" layer="91"/>
+<pinref part="C3" gate="G$1" pin="2"/>
+<wire x1="-284.48" y1="-38.1" x2="-284.48" y2="-33.02" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="SUPPLY33" gate="GND" pin="GND"/>
@@ -25440,7 +25462,13 @@ p(t) = 6mA * 5v = 30mW</text>
 <net name="N$8" class="0">
 <segment>
 <pinref part="U$5" gate="G$1" pin="23/A9/T/PWM/SDA1"/>
-<wire x1="-149.86" y1="76.2" x2="-134.62" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="-144.78" y1="71.12" x2="-134.62" y2="76.2" width="0.1524" layer="91"/>
+<pinref part="R19" gate="G$1" pin="1"/>
+<wire x1="-134.62" y1="76.2" x2="-134.62" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="-134.62" y1="71.12" x2="-139.7" y2="71.12" width="0.1524" layer="91"/>
+<junction x="-134.62" y="76.2"/>
+<wire x1="-139.7" y1="71.12" x2="-139.7" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="-139.7" y1="66.04" x2="-162.56" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="A_IN2" class="0">
@@ -25668,13 +25696,14 @@ p(t) = 6mA * 5v = 30mW</text>
 <pinref part="R9" gate="G$1" pin="1"/>
 <wire x1="-347.98" y1="-27.94" x2="-347.98" y2="-20.32" width="0.1524" layer="91"/>
 <wire x1="-347.98" y1="-20.32" x2="-292.1" y2="-20.32" width="0.1524" layer="91"/>
-<wire x1="-292.1" y1="-20.32" x2="-292.1" y2="-33.02" width="0.1524" layer="91"/>
 <pinref part="IC3" gate="G$1" pin="VCC+"/>
+<wire x1="-292.1" y1="-20.32" x2="-292.1" y2="-33.02" width="0.1524" layer="91"/>
 <wire x1="-292.1" y1="-33.02" x2="-294.64" y2="-33.02" width="0.1524" layer="91"/>
 <pinref part="IC3" gate="G$1" pin="/RES"/>
 <wire x1="-294.64" y1="-35.56" x2="-292.1" y2="-35.56" width="0.1524" layer="91"/>
 <wire x1="-292.1" y1="-35.56" x2="-292.1" y2="-33.02" width="0.1524" layer="91"/>
 <junction x="-292.1" y="-33.02"/>
+<pinref part="C3" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="IND_PWM" class="0">
@@ -25735,7 +25764,11 @@ p(t) = 6mA * 5v = 30mW</text>
 <net name="N$10" class="0">
 <segment>
 <pinref part="U$5" gate="G$1" pin="22/A8/T/PWM/SCL1"/>
-<wire x1="-134.62" y1="78.74" x2="-149.86" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="-134.62" y1="78.74" x2="-144.78" y2="81.28" width="0.1524" layer="91"/>
+<pinref part="R17" gate="G$1" pin="1"/>
+<junction x="-134.62" y="78.74"/>
+<wire x1="-134.62" y1="78.74" x2="-165.1" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="-165.1" y1="78.74" x2="-165.1" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$1" class="0">
