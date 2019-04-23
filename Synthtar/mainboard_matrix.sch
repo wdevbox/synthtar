@@ -24487,6 +24487,8 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <part name="U1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="JOYSTICK" device="PTH" package3d_urn="urn:adsk.eagle:package:6240846/1"/>
 <part name="P+5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device="" value="3V3"/>
 <part name="SUPPLY42" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="SUPPLY43" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="SUPPLY44" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+5V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -24534,8 +24536,8 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <wire x1="-314.96" y1="66.04" x2="-314.96" y2="-2.54" width="0.1524" layer="97"/>
 <wire x1="-314.96" y1="-2.54" x2="-375.92" y2="-2.54" width="0.1524" layer="97"/>
 <wire x1="-375.92" y1="-2.54" x2="-375.92" y2="66.04" width="0.1524" layer="97"/>
-<wire x1="35.56" y1="78.74" x2="134.62" y2="78.74" width="0.1524" layer="97"/>
-<wire x1="134.62" y1="78.74" x2="134.62" y2="10.16" width="0.1524" layer="97"/>
+<wire x1="35.56" y1="78.74" x2="142.24" y2="78.74" width="0.1524" layer="97"/>
+<wire x1="142.24" y1="78.74" x2="142.24" y2="10.16" width="0.1524" layer="97"/>
 <wire x1="35.56" y1="-40.64" x2="35.56" y2="10.16" width="0.1524" layer="97"/>
 <text x="-345.44" y="63.5" size="1.778" layer="97">voume control</text>
 <text x="116.84" y="71.12" size="1.778" layer="97">midi out</text>
@@ -24593,9 +24595,13 @@ p(t) = 6mA * 5v = 30mW</text>
 <text x="-137.16" y="40.64" size="1.778" layer="97">ADD DECOUPLING CAPS</text>
 <text x="-43.18" y="-30.48" size="1.778" layer="91" rot="R90">contrast adjust</text>
 <text x="22.86" y="0" size="1.778" layer="91" rot="R90">backlight power</text>
-<wire x1="134.62" y1="10.16" x2="35.56" y2="10.16" width="0.1524" layer="97"/>
+<wire x1="142.24" y1="10.16" x2="35.56" y2="10.16" width="0.1524" layer="97"/>
 <text x="-370.84" y="60.96" size="1.778" layer="91">lc adc uses 3.3v reference</text>
 <text x="-175.26" y="17.78" size="1.778" layer="91">internally this is also a 10k pot</text>
+<text x="-167.64" y="55.88" size="1.778" layer="91" rot="R90">pull up resistors, no current flowing most of the time</text>
+<text x="-165.1" y="53.34" size="1.778" layer="91" rot="R90">negligible current because it's just during transmission</text>
+<text x="50.8" y="50.8" size="1.778" layer="91">need to invert this first!~ optocoupler inverts on the other side</text>
+<text x="-88.9" y="-43.18" size="1.778" layer="91">this is hacked together because I only had these parts, might switch to i2c but I kind of like offloading the screen stuff to the nano</text>
 </plain>
 <instances>
 <instance part="S1" gate="1" x="-363.22" y="114.3" rot="R180"/>
@@ -24730,13 +24736,15 @@ p(t) = 6mA * 5v = 30mW</text>
 <instance part="SUPPLY39" gate="+5V" x="-33.02" y="-10.16"/>
 <instance part="SUPPLY40" gate="GND" x="-33.02" y="-38.1"/>
 <instance part="SUPPLY41" gate="GND" x="-7.62" y="-5.08" rot="R180"/>
-<instance part="R17" gate="G$1" x="-149.86" y="76.2" rot="R180"/>
-<instance part="R19" gate="G$1" x="-149.86" y="71.12" rot="R180"/>
-<instance part="P+3" gate="VCC" x="-154.94" y="88.9"/>
+<instance part="R17" gate="G$1" x="-154.94" y="83.82" rot="R90"/>
+<instance part="R19" gate="G$1" x="-160.02" y="81.28" rot="R90"/>
+<instance part="P+3" gate="VCC" x="-154.94" y="93.98"/>
 <instance part="C3" gate="G$1" x="-289.56" y="-33.02" rot="R90"/>
 <instance part="U1" gate="G$1" x="-152.4" y="38.1"/>
 <instance part="P+5" gate="VCC" x="-167.64" y="48.26" rot="R90"/>
 <instance part="SUPPLY42" gate="GND" x="-167.64" y="43.18" rot="R270"/>
+<instance part="SUPPLY43" gate="GND" x="-30.48" y="7.62" rot="R90"/>
+<instance part="SUPPLY44" gate="+5V" x="-30.48" y="10.16" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -25102,10 +25110,10 @@ p(t) = 6mA * 5v = 30mW</text>
 <segment>
 <pinref part="R17" gate="G$1" pin="2"/>
 <pinref part="P+3" gate="VCC" pin="VCC"/>
-<wire x1="-154.94" y1="86.36" x2="-154.94" y2="76.2" width="0.1524" layer="91"/>
 <pinref part="R19" gate="G$1" pin="2"/>
-<wire x1="-154.94" y1="71.12" x2="-154.94" y2="76.2" width="0.1524" layer="91"/>
-<junction x="-154.94" y="76.2"/>
+<wire x1="-160.02" y1="86.36" x2="-154.94" y2="91.44" width="0.1524" layer="91"/>
+<junction x="-154.94" y="91.44"/>
+<wire x1="-154.94" y1="91.44" x2="-154.94" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="V+"/>
@@ -25257,6 +25265,11 @@ p(t) = 6mA * 5v = 30mW</text>
 <pinref part="SUPPLY42" gate="GND" pin="GND"/>
 <wire x1="-165.1" y1="43.18" x2="-162.56" y2="43.18" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="U$6" gate="G$1" pin="GND.2"/>
+<pinref part="SUPPLY43" gate="GND" pin="GND"/>
+<wire x1="-33.02" y1="7.62" x2="-35.56" y2="7.62" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="+5V" class="0">
 <segment>
@@ -25319,6 +25332,11 @@ p(t) = 6mA * 5v = 30mW</text>
 <segment>
 <pinref part="X1" gate="G$1" pin="VDD"/>
 <pinref part="SUPPLY35" gate="+5V" pin="+5V"/>
+</segment>
+<segment>
+<pinref part="U$6" gate="G$1" pin="HV"/>
+<pinref part="SUPPLY44" gate="+5V" pin="+5V"/>
+<wire x1="-33.02" y1="10.16" x2="-35.56" y2="10.16" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VS_MIDI" class="0">
@@ -25568,18 +25586,6 @@ p(t) = 6mA * 5v = 30mW</text>
 <pinref part="U$1" gate="G$1" pin="5"/>
 <wire x1="81.28" y1="30.48" x2="63.5" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="R20" gate="G$1" pin="1"/>
-</segment>
-</net>
-<net name="N$8" class="0">
-<segment>
-<pinref part="U$5" gate="G$1" pin="23/A9/T/PWM/SDA1"/>
-<wire x1="-144.78" y1="71.12" x2="-134.62" y2="76.2" width="0.1524" layer="91"/>
-<pinref part="R19" gate="G$1" pin="1"/>
-<wire x1="-134.62" y1="76.2" x2="-134.62" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="-134.62" y1="71.12" x2="-139.7" y2="71.12" width="0.1524" layer="91"/>
-<junction x="-134.62" y="76.2"/>
-<wire x1="-139.7" y1="71.12" x2="-139.7" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="-139.7" y1="66.04" x2="-162.56" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="A_IN2" class="0">
@@ -25871,15 +25877,21 @@ p(t) = 6mA * 5v = 30mW</text>
 <wire x1="-66.04" y1="2.54" x2="-81.28" y2="2.54" width="0.1524" layer="91"/>
 <label x="-86.36" y="0" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="U$5" gate="G$1" pin="0/RX1/T/MOSI1"/>
+<wire x1="-134.62" y1="134.62" x2="-165.1" y2="134.62" width="0.1524" layer="91"/>
+<label x="-157.48" y="134.62" size="1.778" layer="95"/>
+</segment>
 </net>
-<net name="N$10" class="0">
+<net name="I2C_SCL" class="0">
 <segment>
 <pinref part="U$5" gate="G$1" pin="22/A8/T/PWM/SCL1"/>
-<wire x1="-134.62" y1="78.74" x2="-144.78" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="-134.62" y1="78.74" x2="-142.24" y2="78.74" width="0.1524" layer="91"/>
 <pinref part="R17" gate="G$1" pin="1"/>
-<junction x="-134.62" y="78.74"/>
-<wire x1="-134.62" y1="78.74" x2="-165.1" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="-165.1" y1="78.74" x2="-165.1" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="-142.24" y1="78.74" x2="-154.94" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="-142.24" y1="78.74" x2="-142.24" y2="71.12" width="0.1524" layer="91"/>
+<junction x="-142.24" y="78.74"/>
+<label x="-144.78" y="68.58" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -25970,6 +25982,16 @@ p(t) = 6mA * 5v = 30mW</text>
 <pinref part="U$5" gate="G$1" pin="18/A4/T/SDA"/>
 <wire x1="-134.62" y1="88.9" x2="-139.7" y2="88.9" width="0.1524" layer="91"/>
 <label x="-149.86" y="88.9" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="I2C_SDA" class="0">
+<segment>
+<pinref part="U$5" gate="G$1" pin="23/A9/T/PWM/SDA1"/>
+<pinref part="R19" gate="G$1" pin="1"/>
+<wire x1="-160.02" y1="76.2" x2="-147.32" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="-147.32" y1="76.2" x2="-134.62" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="-147.32" y1="76.2" x2="-147.32" y2="71.12" width="0.1524" layer="91"/>
+<label x="-157.48" y="71.12" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
