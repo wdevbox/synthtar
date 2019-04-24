@@ -5142,6 +5142,18 @@ In this library the device names are the same as the pin names of the symbols, t
 <text x="-25.4" y="-27.94" size="1.778" layer="91">TO DO: indicators, power in, decoupling
 make 4 pin header for i2c, onboard level shifter?
 amp on board?</text>
+<text x="-25.4" y="-30.48" size="1.778" layer="91">level shifter for indicators too? just to be safe? hmm</text>
+<text x="-25.4" y="-33.02" size="1.778" layer="91">at that point i might as well onboard the nano's shifter and only use a 4 pin over there as well</text>
+<text x="-25.4" y="-40.64" size="1.778" layer="91">HCT version of the shift register will take 3.3v fine, HC version will not and will require a level shifter</text>
+<text x="-25.4" y="-45.72" size="1.778" layer="91">shift on board or on other side? on board will require fewer wires, and i'm not really doing much here anyway...</text>
+<text x="-78.74" y="86.36" size="1.778" layer="91">needs level shifter... will only work with 3.3v</text>
+<text x="-25.4" y="-50.8" size="1.778" layer="91">on board for indicators and i2c, offboard for nano/screen</text>
+<text x="-25.4" y="-55.88" size="1.778" layer="91">make single board for all digital body inputs, 8 pins</text>
+<text x="-25.4" y="-71.12" size="1.778" layer="91">16 buttons - 
+4 body 
+4 quick
+4 menu
+4 additional (2 used)</text>
 </plain>
 <instances>
 <instance part="VS1" gate="G$1" x="66.04" y="71.12"/>

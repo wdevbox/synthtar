@@ -5138,6 +5138,15 @@ In this library the device names are the same as the pin names of the symbols, t
 <text x="-78.74" y="88.9" size="1.778" layer="91">nano screen assembly</text>
 <text x="139.7" y="88.9" size="1.778" layer="91">to headphone jack</text>
 <text x="170.18" y="88.9" size="1.778" layer="91">to amp?</text>
+<text x="53.34" y="-5.08" size="1.778" layer="91">when operating alone</text>
+<text x="-25.4" y="-27.94" size="1.778" layer="91">TO DO: indicators, power in, decoupling
+make 4 pin header for i2c, onboard level shifter?
+amp on board?</text>
+<text x="-25.4" y="-30.48" size="1.778" layer="91">level shifter for indicators too? just to be safe? hmm</text>
+<text x="-25.4" y="-33.02" size="1.778" layer="91">at that point i might as well onboard the nano's shifter and only use a 4 pin over there as well</text>
+<text x="-25.4" y="-40.64" size="1.778" layer="91">HCT version of the shift register will take 3.3v fine, HC version will not and will require a level shifter</text>
+<text x="-25.4" y="-45.72" size="1.778" layer="91">shift on board or on other side? on board will require fewer wires, and i'm not really doing much here anyway...</text>
+<text x="-78.74" y="86.36" size="1.778" layer="91">needs level shifter... will only work with 3.3v</text>
 </plain>
 <instances>
 <instance part="VS1" gate="G$1" x="66.04" y="71.12"/>
@@ -5355,6 +5364,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="35.56" y1="55.88" x2="25.4" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="VS1" gate="G$1" pin="3V3"/>
 <wire x1="25.4" y1="71.12" x2="35.56" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="71.12" x2="25.4" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$25" class="0">
@@ -5650,6 +5660,10 @@ In this library the device names are the same as the pin names of the symbols, t
 </schematic>
 </drawing>
 <compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
 <note version="8.2" severity="warning">
 Since Version 8.2, EAGLE supports online libraries. The ids
 of those online libraries will not be understood (or retained)
