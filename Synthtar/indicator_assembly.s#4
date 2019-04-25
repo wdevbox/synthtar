@@ -17370,7 +17370,8 @@ VFP: IC-09173 (555 PTH) - &lt;b&gt;Preferred&lt;/b&gt;&lt;br&gt;</description>
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="default" width="0" drill="0">
+<class number="0" name="default" width="0.508" drill="0.254">
+<clearance class="0" value="0.254"/>
 </class>
 </classes>
 <parts>

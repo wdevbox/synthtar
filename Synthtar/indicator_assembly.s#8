@@ -19319,6 +19319,7 @@ VFP: IC-09173 (555 PTH) - &lt;b&gt;Preferred&lt;/b&gt;&lt;br&gt;</description>
 <text x="83.82" y="25.4" size="1.778" layer="97">all leds on: I(t) = 1.5mA * 4 = 6mA
 p(t) = 6mA * 5v = 30mW</text>
 <text x="83.82" y="20.32" size="1.778" layer="97">IC current is negligible (datasheet lists as 8uA)</text>
+<text x="154.94" y="73.66" size="1.778" layer="91">potentially make these headers~!</text>
 </plain>
 <instances>
 <instance part="IC1" gate="A" x="114.3" y="55.88"/>

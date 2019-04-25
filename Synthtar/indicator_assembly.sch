@@ -17448,6 +17448,10 @@ p(t) = 6mA * 5v = 30mW</text>
 <text x="190.5" y="76.2" size="1.778" layer="91">potentially make these headers~!</text>
 <text x="190.5" y="73.66" size="1.778" layer="91">for mounting the leds on the case at various locations</text>
 <text x="193.04" y="38.1" size="1.778" layer="91">redo these resistor calcs based on color</text>
+<text x="208.28" y="66.04" size="1.778" layer="91">green</text>
+<text x="208.28" y="12.7" size="1.778" layer="91">blue</text>
+<text x="208.28" y="27.94" size="1.778" layer="91">red</text>
+<text x="208.28" y="48.26" size="1.778" layer="91">red</text>
 </plain>
 <instances>
 <instance part="IC1" gate="A" x="114.3" y="55.88"/>
