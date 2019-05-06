@@ -5246,6 +5246,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="U$7" library="mask_lbr" deviceset="2-PIN-HEADER" device=""/>
 <part name="U$8" library="mask_lbr" deviceset="7-PIN-HEADER" device=""/>
 <part name="SUPPLY4" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="U$1" library="mask_lbr" deviceset="2-PIN-HEADER" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -5327,6 +5328,7 @@ amp on board?</text>
 <instance part="U$7" gate="G$1" x="-58.42" y="88.9" rot="R270"/>
 <instance part="U$8" gate="G$1" x="-99.06" y="-50.8"/>
 <instance part="SUPPLY4" gate="GND" x="-109.22" y="-63.5"/>
+<instance part="U$1" gate="G$1" x="-66.04" y="-15.24" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -5663,9 +5665,10 @@ amp on board?</text>
 <wire x1="-53.34" y1="5.08" x2="-63.5" y2="5.08" width="0.1524" layer="91"/>
 <pinref part="R17" gate="G$1" pin="1"/>
 <wire x1="-63.5" y1="5.08" x2="-76.2" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="-63.5" y1="5.08" x2="-63.5" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="-63.5" y1="5.08" x2="-63.5" y2="-7.62" width="0.1524" layer="91"/>
 <junction x="-63.5" y="5.08"/>
 <label x="-66.04" y="-5.08" size="1.778" layer="95"/>
+<pinref part="U$1" gate="G$1" pin="P$1"/>
 </segment>
 </net>
 <net name="A_WHAM" class="0">
@@ -5688,6 +5691,9 @@ amp on board?</text>
 <wire x1="-68.58" y1="2.54" x2="-53.34" y2="2.54" width="0.1524" layer="91"/>
 <wire x1="-68.58" y1="2.54" x2="-68.58" y2="-2.54" width="0.1524" layer="91"/>
 <label x="-78.74" y="-2.54" size="1.778" layer="95"/>
+<pinref part="U$1" gate="G$1" pin="P$2"/>
+<wire x1="-71.12" y1="-7.62" x2="-71.12" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="-71.12" y1="-2.54" x2="-68.58" y2="-2.54" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SCREEN_BUSYLV" class="0">

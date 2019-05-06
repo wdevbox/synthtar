@@ -5284,6 +5284,7 @@ amp on board?</text>
 <text x="-180.34" y="-40.64" size="1.778" layer="91">audio header board? need a 7 pin connector...</text>
 <text x="-190.5" y="-43.18" size="1.778" layer="91">yeah, let's have an analog board. we can add it on later!</text>
 <text x="-109.22" y="-15.24" size="1.778" layer="91">trigger this with a voltage when you measure? saves power...</text>
+<text x="-109.22" y="-17.78" size="1.778" layer="91">pick a pin I guess...</text>
 </plain>
 <instances>
 <instance part="U$5" gate="G$1" x="-30.48" y="33.02"/>
