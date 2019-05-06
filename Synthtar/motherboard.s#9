@@ -5225,11 +5225,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="R19" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0204/7" package3d_urn="urn:adsk.eagle:package:23498/1" value="4.7k"/>
 <part name="P+3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device="" value="3V3"/>
 <part name="NECK_HEADER" library="mask_lbr" deviceset="5-PIN-HEADER" device=""/>
-<part name="U$1" library="mask_lbr" deviceset="3-PIN-HEADER" device=""/>
-<part name="U$2" library="mask_lbr" deviceset="3-PIN-HEADER" device=""/>
-<part name="U$3" library="mask_lbr" deviceset="3-PIN-HEADER" device=""/>
-<part name="U$4" library="mask_lbr" deviceset="3-PIN-HEADER" device=""/>
-<part name="U$6" library="mask_lbr" deviceset="3-PIN-HEADER" device=""/>
 <part name="U$10" library="mask_lbr" deviceset="8-PIN-HEADER" device=""/>
 <part name="U$11" library="mask_lbr" deviceset="4-PIN-HEADER" device=""/>
 <part name="U$12" library="mask_lbr" deviceset="LEVEL-SHIFTER" device=""/>
@@ -5249,7 +5244,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="SUPPLY15" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY16" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+5V" device=""/>
 <part name="U$7" library="mask_lbr" deviceset="2-PIN-HEADER" device=""/>
-<part name="SUPPLY1" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="U$8" library="mask_lbr" deviceset="7-PIN-HEADER" device=""/>
 <part name="SUPPLY4" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 </parts>
@@ -5290,6 +5284,10 @@ amp on board?</text>
 <text x="-180.34" y="-40.64" size="1.778" layer="91">audio header board? need a 7 pin connector...</text>
 <text x="-190.5" y="-43.18" size="1.778" layer="91">yeah, let's have an analog board. we can add it on later!</text>
 <text x="-109.22" y="-15.24" size="1.778" layer="91">trigger this with a voltage when you measure? saves power...</text>
+<text x="-109.22" y="-17.78" size="1.778" layer="91">pick a pin I guess...</text>
+<text x="-137.16" y="38.1" size="1.778" layer="91">can I use this pin?
+ arduino forum says Serial.begin dedicates the pins.
+ I'm not receiving data from the 1053b though...</text>
 </plain>
 <instances>
 <instance part="U$5" gate="G$1" x="-30.48" y="33.02"/>
@@ -5305,11 +5303,6 @@ amp on board?</text>
 <instance part="R19" gate="G$1" x="-81.28" y="7.62" rot="R90"/>
 <instance part="P+3" gate="VCC" x="-76.2" y="20.32"/>
 <instance part="NECK_HEADER" gate="G$1" x="-149.86" y="48.26"/>
-<instance part="U$1" gate="G$1" x="-114.3" y="-25.4"/>
-<instance part="U$2" gate="G$1" x="-114.3" y="-43.18"/>
-<instance part="U$3" gate="G$1" x="-114.3" y="-60.96"/>
-<instance part="U$4" gate="G$1" x="-114.3" y="-78.74"/>
-<instance part="U$6" gate="G$1" x="-114.3" y="-99.06"/>
 <instance part="U$10" gate="G$1" x="-162.56" y="7.62"/>
 <instance part="U$11" gate="G$1" x="-73.66" y="170.18"/>
 <instance part="U$12" gate="G$1" x="-60.96" y="121.92"/>
@@ -5330,9 +5323,8 @@ amp on board?</text>
 <instance part="SUPPLY15" gate="GND" x="-55.88" y="142.24" rot="R180"/>
 <instance part="SUPPLY16" gate="+5V" x="-60.96" y="142.24"/>
 <instance part="U$7" gate="G$1" x="-58.42" y="88.9" rot="R270"/>
-<instance part="SUPPLY1" gate="GND" x="-114.3" y="-111.76"/>
-<instance part="U$8" gate="G$1" x="-73.66" y="-27.94"/>
-<instance part="SUPPLY4" gate="GND" x="-83.82" y="-40.64"/>
+<instance part="U$8" gate="G$1" x="-99.06" y="-50.8"/>
+<instance part="SUPPLY4" gate="GND" x="-109.22" y="-63.5"/>
 </instances>
 <busses>
 </busses>
@@ -5529,26 +5521,9 @@ amp on board?</text>
 <wire x1="58.42" y1="27.94" x2="58.42" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$6" gate="G$1" pin="P$2"/>
-<pinref part="U$4" gate="G$1" pin="P$2"/>
-<wire x1="-114.3" y1="-109.22" x2="-114.3" y2="-86.36" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="G$1" pin="P$2"/>
-<wire x1="-114.3" y1="-86.36" x2="-114.3" y2="-68.58" width="0.1524" layer="91"/>
-<junction x="-114.3" y="-86.36"/>
-<pinref part="U$2" gate="G$1" pin="P$2"/>
-<wire x1="-114.3" y1="-68.58" x2="-114.3" y2="-50.8" width="0.1524" layer="91"/>
-<junction x="-114.3" y="-68.58"/>
-<pinref part="U$1" gate="G$1" pin="P$2"/>
-<wire x1="-114.3" y1="-50.8" x2="-114.3" y2="-33.02" width="0.1524" layer="91"/>
-<junction x="-114.3" y="-50.8"/>
-<pinref part="SUPPLY1" gate="GND" pin="GND"/>
-<junction x="-114.3" y="-109.22"/>
-<wire x1="-114.3" y1="-109.22" x2="-114.3" y2="-106.68" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="U$8" gate="G$1" pin="P$2"/>
 <pinref part="SUPPLY4" gate="GND" pin="GND"/>
-<wire x1="-83.82" y1="-38.1" x2="-83.82" y2="-35.56" width="0.1524" layer="91"/>
+<wire x1="-109.22" y1="-60.96" x2="-109.22" y2="-58.42" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+5V" class="0">
@@ -5606,14 +5581,9 @@ amp on board?</text>
 <label x="-68.58" y="25.4" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="P$3"/>
-<wire x1="-109.22" y1="-33.02" x2="-99.06" y2="-33.02" width="0.1524" layer="91"/>
-<label x="-101.6" y="-30.48" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="U$8" gate="G$1" pin="P$3"/>
-<wire x1="-78.74" y1="-35.56" x2="-78.74" y2="-48.26" width="0.1524" layer="91"/>
-<label x="-78.74" y="-48.26" size="1.778" layer="95" rot="R90"/>
+<wire x1="-104.14" y1="-58.42" x2="-104.14" y2="-71.12" width="0.1524" layer="91"/>
+<label x="-104.14" y="-71.12" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="VS_RST" class="0">
@@ -5635,14 +5605,9 @@ amp on board?</text>
 <label x="-68.58" y="22.86" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="P$3"/>
-<wire x1="-109.22" y1="-50.8" x2="-99.06" y2="-50.8" width="0.1524" layer="91"/>
-<label x="-99.06" y="-50.8" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="U$8" gate="G$1" pin="P$4"/>
-<wire x1="-73.66" y1="-35.56" x2="-73.66" y2="-48.26" width="0.1524" layer="91"/>
-<label x="-73.66" y="-48.26" size="1.778" layer="95" rot="R90"/>
+<wire x1="-99.06" y1="-58.42" x2="-99.06" y2="-71.12" width="0.1524" layer="91"/>
+<label x="-99.06" y="-71.12" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="A_IN3" class="0">
@@ -5652,14 +5617,9 @@ amp on board?</text>
 <label x="-68.58" y="20.32" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$3" gate="G$1" pin="P$3"/>
-<wire x1="-109.22" y1="-68.58" x2="-101.6" y2="-68.58" width="0.1524" layer="91"/>
-<label x="-99.06" y="-68.58" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="U$8" gate="G$1" pin="P$5"/>
-<wire x1="-68.58" y1="-35.56" x2="-68.58" y2="-48.26" width="0.1524" layer="91"/>
-<label x="-68.58" y="-48.26" size="1.778" layer="95" rot="R90"/>
+<wire x1="-93.98" y1="-58.42" x2="-93.98" y2="-71.12" width="0.1524" layer="91"/>
+<label x="-93.98" y="-71.12" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="A_IN4" class="0">
@@ -5669,14 +5629,9 @@ amp on board?</text>
 <label x="-68.58" y="17.78" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$4" gate="G$1" pin="P$3"/>
-<wire x1="-109.22" y1="-86.36" x2="-99.06" y2="-86.36" width="0.1524" layer="91"/>
-<label x="-99.06" y="-83.82" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="U$8" gate="G$1" pin="P$6"/>
-<wire x1="-63.5" y1="-35.56" x2="-63.5" y2="-48.26" width="0.1524" layer="91"/>
-<label x="-63.5" y="-48.26" size="1.778" layer="95" rot="R90"/>
+<wire x1="-88.9" y1="-58.42" x2="-88.9" y2="-71.12" width="0.1524" layer="91"/>
+<label x="-88.9" y="-71.12" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="ADD_BTNS" class="0">
@@ -5718,16 +5673,9 @@ amp on board?</text>
 <label x="-71.12" y="15.24" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$6" gate="G$1" pin="P$3"/>
-<wire x1="-111.76" y1="-106.68" x2="-109.22" y2="-106.68" width="0.1524" layer="91"/>
-<wire x1="-109.22" y1="-106.68" x2="-99.06" y2="-106.68" width="0.1524" layer="91"/>
-<junction x="-109.22" y="-106.68"/>
-<label x="-101.6" y="-106.68" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="U$8" gate="G$1" pin="P$7"/>
-<wire x1="-58.42" y1="-35.56" x2="-58.42" y2="-48.26" width="0.1524" layer="91"/>
-<label x="-58.42" y="-50.8" size="1.778" layer="95" rot="R90"/>
+<wire x1="-83.82" y1="-58.42" x2="-83.82" y2="-71.12" width="0.1524" layer="91"/>
+<label x="-83.82" y="-73.66" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="I2C_SDA" class="0">
@@ -5738,22 +5686,6 @@ amp on board?</text>
 <wire x1="-68.58" y1="2.54" x2="-53.34" y2="2.54" width="0.1524" layer="91"/>
 <wire x1="-68.58" y1="2.54" x2="-68.58" y2="-2.54" width="0.1524" layer="91"/>
 <label x="-78.74" y="-2.54" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$1" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="P$1"/>
-<pinref part="U$2" gate="G$1" pin="P$1"/>
-<wire x1="-119.38" y1="-33.02" x2="-119.38" y2="-50.8" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="G$1" pin="P$1"/>
-<wire x1="-119.38" y1="-50.8" x2="-119.38" y2="-68.58" width="0.1524" layer="91"/>
-<junction x="-119.38" y="-50.8"/>
-<pinref part="U$4" gate="G$1" pin="P$1"/>
-<wire x1="-119.38" y1="-68.58" x2="-119.38" y2="-86.36" width="0.1524" layer="91"/>
-<junction x="-119.38" y="-68.58"/>
-<pinref part="U$6" gate="G$1" pin="P$1"/>
-<wire x1="-119.38" y1="-86.36" x2="-119.38" y2="-106.68" width="0.1524" layer="91"/>
-<junction x="-119.38" y="-86.36"/>
 </segment>
 </net>
 <net name="SCREEN_BUSYLV" class="0">
@@ -5786,10 +5718,16 @@ amp on board?</text>
 <wire x1="-66.04" y1="91.44" x2="-66.04" y2="109.22" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$2" class="0">
+<net name="ANALOG_ACTIVE" class="0">
+<segment>
+<pinref part="U$5" gate="G$1" pin="7/RX3"/>
+<wire x1="-53.34" y1="43.18" x2="-86.36" y2="43.18" width="0.1524" layer="91"/>
+<label x="-96.52" y="43.18" size="1.778" layer="95"/>
+</segment>
 <segment>
 <pinref part="U$8" gate="G$1" pin="P$1"/>
-<wire x1="-88.9" y1="-35.56" x2="-88.9" y2="-48.26" width="0.1524" layer="91"/>
+<wire x1="-114.3" y1="-58.42" x2="-114.3" y2="-71.12" width="0.1524" layer="91"/>
+<label x="-114.3" y="-81.28" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 </nets>

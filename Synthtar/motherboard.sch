@@ -4769,40 +4769,6 @@ In this library the device names are the same as the pin names of the symbols, t
 </deviceset>
 </devicesets>
 </library>
-<library name="supply1" urn="urn:adsk.eagle:library:371">
-<description>&lt;b&gt;Supply Symbols&lt;/b&gt;&lt;p&gt;
- GND, VCC, 0V, +5V, -5V, etc.&lt;p&gt;
- Please keep in mind, that these devices are necessary for the
- automatic wiring of the supply signals.&lt;p&gt;
- The pin name defined in the symbol is identical to the net which is to be wired automatically.&lt;p&gt;
- In this library the device names are the same as the pin names of the symbols, therefore the correct signal names appear next to the supply symbols in the schematic.&lt;p&gt;
- &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
-<packages>
-</packages>
-<symbols>
-<symbol name="VCC" urn="urn:adsk.eagle:symbol:26928/1" library_version="1">
-<wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
-<text x="-2.54" y="-2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
-<pin name="VCC" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="VCC" urn="urn:adsk.eagle:component:26957/1" prefix="P+" library_version="1">
-<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
-<gates>
-<gate name="VCC" symbol="VCC" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="mask_lbr">
 <packages>
 <package name="5-PIN-HEADER">
@@ -4898,14 +4864,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <text x="-3.8462" y="-5.0038" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="-4.532" y="0.635" size="1.27" layer="21" ratio="10">1</text>
 <text x="0.421" y="0.635" size="1.27" layer="21" ratio="10">2</text>
-</package>
-<package name="2-PIN-HEADER">
-<pad name="P$1" x="-1.27" y="0" drill="1" diameter="1.9304" shape="octagon"/>
-<pad name="P$2" x="1.27" y="0" drill="1" diameter="1.9304" shape="octagon"/>
-<wire x1="-2.54" y1="1.27" x2="2.54" y2="1.27" width="0.127" layer="21"/>
-<wire x1="2.54" y1="1.27" x2="2.54" y2="-1.27" width="0.127" layer="21"/>
-<wire x1="2.54" y1="-1.27" x2="-2.54" y2="-1.27" width="0.127" layer="21"/>
-<wire x1="-2.54" y1="-1.27" x2="-2.54" y2="1.27" width="0.127" layer="21"/>
 </package>
 <package name="7-PIN-HEADER">
 <pad name="P$1" x="-7.62" y="0" drill="1" diameter="1.6764" shape="square"/>
@@ -5008,16 +4966,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <text x="-2.54" y="-3.683" size="1.778" layer="96">&gt;VALUE</text>
 <text x="0" y="0.889" size="1.778" layer="95" rot="R180">&gt;NAME</text>
 <pin name="KL" x="5.08" y="0" visible="off" length="short" direction="pas" rot="R180"/>
-</symbol>
-<symbol name="2-PIN-HEADER">
-<wire x1="-2.54" y1="2.54" x2="5.08" y2="2.54" width="0.254" layer="94"/>
-<wire x1="5.08" y1="2.54" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="5.08" y1="-2.54" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="2.54" width="0.254" layer="94"/>
-<pin name="P$1" x="-2.54" y="-7.62" length="middle" rot="R90"/>
-<pin name="P$2" x="5.08" y="-7.62" length="middle" rot="R90"/>
-<text x="-2.54" y="7.62" size="1.778" layer="94">&gt;NAME</text>
-<text x="-2.54" y="5.08" size="1.778" layer="94">&gt;VALUE</text>
 </symbol>
 <symbol name="7-PIN-HEADER">
 <wire x1="-15.24" y1="5.08" x2="15.24" y2="5.08" width="0.254" layer="94"/>
@@ -5163,22 +5111,6 @@ In this library the device names are the same as the pin names of the symbols, t
 </device>
 </devices>
 </deviceset>
-<deviceset name="2-PIN-HEADER">
-<gates>
-<gate name="G$1" symbol="2-PIN-HEADER" x="-55.88" y="17.78"/>
-</gates>
-<devices>
-<device name="" package="2-PIN-HEADER">
-<connects>
-<connect gate="G$1" pin="P$1" pad="P$1"/>
-<connect gate="G$1" pin="P$2" pad="P$2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="7-PIN-HEADER">
 <gates>
 <gate name="G$1" symbol="7-PIN-HEADER" x="0" y="0"/>
@@ -5208,12 +5140,12 @@ In this library the device names are the same as the pin names of the symbols, t
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="default" width="0" drill="0">
+<class number="0" name="default" width="0.508" drill="0">
+<clearance class="0" value="0.254"/>
 </class>
 </classes>
 <parts>
 <part name="U$5" library="Teensy_3_and_LC_Series_Boards_v1.4" deviceset="TEENSY_LC_ALL_PINS" device=""/>
-<part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device="" value="3V3"/>
 <part name="SUPPLY2" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+5V" device=""/>
 <part name="SUPPLY6" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="R10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0204/7" package3d_urn="urn:adsk.eagle:package:23498/1" value="10k"/>
@@ -5221,9 +5153,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="R12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0204/7" package3d_urn="urn:adsk.eagle:package:23498/1" value="10k"/>
 <part name="R13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0204/7" package3d_urn="urn:adsk.eagle:package:23498/1" value="10k"/>
 <part name="SUPPLY5" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="R17" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0204/7" package3d_urn="urn:adsk.eagle:package:23498/1" value="4.7k"/>
-<part name="R19" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0204/7" package3d_urn="urn:adsk.eagle:package:23498/1" value="4.7k"/>
-<part name="P+3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device="" value="3V3"/>
 <part name="NECK_HEADER" library="mask_lbr" deviceset="5-PIN-HEADER" device=""/>
 <part name="U$10" library="mask_lbr" deviceset="8-PIN-HEADER" device=""/>
 <part name="U$11" library="mask_lbr" deviceset="4-PIN-HEADER" device=""/>
@@ -5239,20 +5168,16 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="X1" library="mask_lbr" deviceset="W237-102" device="" package3d_urn="urn:adsk.eagle:package:10688/1"/>
 <part name="SUPPLY3" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+5V" device=""/>
 <part name="SUPPLY8" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="P+4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device="" value="3V3"/>
 <part name="SUPPLY11" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY15" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY16" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+5V" device=""/>
-<part name="U$7" library="mask_lbr" deviceset="2-PIN-HEADER" device=""/>
 <part name="U$8" library="mask_lbr" deviceset="7-PIN-HEADER" device=""/>
 <part name="SUPPLY4" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="U$1" library="mask_lbr" deviceset="2-PIN-HEADER" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 <text x="-55.88" y="-7.62" size="1.778" layer="91">over 3.3v on the digital pins can fry teensy lc...</text>
-<text x="-68.58" y="2.54" size="1.778" layer="97">reserved for i2c</text>
 <text x="-35.56" y="88.9" size="1.778" layer="91">nano screen assembly</text>
 <text x="-25.4" y="-27.94" size="1.778" layer="91">TO DO: indicators, power in, decoupling
 make 4 pin header for i2c, onboard level shifter?
@@ -5281,30 +5206,31 @@ amp on board?</text>
 <text x="-63.5" y="149.86" size="1.778" layer="91">how should I remove it? jumper to make it optional?</text>
 <text x="-40.64" y="129.54" size="1.778" layer="91">pull the unused parts of this shifter low?</text>
 <text x="-60.96" y="68.58" size="1.778" layer="91">dno't want this to float... use jumper so we don't use it in this prototype!</text>
-<text x="-119.38" y="0" size="1.778" layer="91">not using this i2c in this version...</text>
+<text x="-114.3" y="10.16" size="1.778" layer="91">not using this i2c in this version...</text>
 <text x="-180.34" y="-40.64" size="1.778" layer="91">audio header board? need a 7 pin connector...</text>
 <text x="-190.5" y="-43.18" size="1.778" layer="91">yeah, let's have an analog board. we can add it on later!</text>
-<text x="-109.22" y="-15.24" size="1.778" layer="91">trigger this with a voltage when you measure? saves power...</text>
-<text x="-109.22" y="-17.78" size="1.778" layer="91">pick a pin I guess...</text>
+<text x="25.4" y="-7.62" size="1.778" layer="91">trigger this with a voltage when you measure? saves power...</text>
+<text x="25.4" y="-10.16" size="1.778" layer="91">pick a pin I guess...</text>
 <text x="-137.16" y="38.1" size="1.778" layer="91">can I use this pin?
  arduino forum says Serial.begin dedicates the pins.
  I'm not receiving data from the 1053b though...</text>
 <text x="-139.7" y="35.56" size="1.778" layer="91">so it should be fine to init it as an output after the fact?</text>
-<text x="-121.92" y="-2.54" size="1.778" layer="91">switch to 19 I guess. Just in case!</text>
+<text x="-111.76" y="12.7" size="1.778" layer="91">switch to 19 I guess. Just in case!</text>
+<text x="-124.46" y="-22.86" size="1.778" layer="91">cutting out teensy i2c for now,
+ re-add later when you have more time!
+ when re-adding, use 4.7k pull-ups, and run through the level shifter to use its extra ports</text>
+<text x="-124.46" y="-25.4" size="1.778" layer="91">it's on the same side anyway</text>
+<text x="-109.22" y="2.54" size="1.778" layer="91">make sure to use a 4 pin too...</text>
 </plain>
 <instances>
 <instance part="U$5" gate="G$1" x="-30.48" y="33.02"/>
-<instance part="P+1" gate="VCC" x="7.62" y="55.88" rot="R270"/>
-<instance part="SUPPLY2" gate="+5V" x="-5.08" y="58.42" rot="R270"/>
+<instance part="SUPPLY2" gate="+5V" x="-2.54" y="58.42" rot="R270"/>
 <instance part="SUPPLY6" gate="GND" x="-5.08" y="50.8" rot="R90"/>
 <instance part="R10" gate="G$1" x="-76.2" y="38.1" rot="R180"/>
 <instance part="R11" gate="G$1" x="-76.2" y="35.56" rot="R180"/>
 <instance part="R12" gate="G$1" x="-76.2" y="33.02" rot="R180"/>
 <instance part="R13" gate="G$1" x="-76.2" y="30.48" rot="R180"/>
 <instance part="SUPPLY5" gate="GND" x="-83.82" y="27.94"/>
-<instance part="R17" gate="G$1" x="-76.2" y="10.16" rot="R90"/>
-<instance part="R19" gate="G$1" x="-81.28" y="7.62" rot="R90"/>
-<instance part="P+3" gate="VCC" x="-76.2" y="20.32"/>
 <instance part="NECK_HEADER" gate="G$1" x="-149.86" y="48.26"/>
 <instance part="U$10" gate="G$1" x="-162.56" y="7.62"/>
 <instance part="U$11" gate="G$1" x="-73.66" y="170.18"/>
@@ -5321,14 +5247,11 @@ amp on board?</text>
 <instance part="X1" gate="-2" x="5.08" y="101.6" rot="R180"/>
 <instance part="SUPPLY3" gate="+5V" x="-5.08" y="101.6" rot="R90"/>
 <instance part="SUPPLY8" gate="GND" x="-5.08" y="96.52" rot="R270"/>
-<instance part="P+4" gate="VCC" x="-60.96" y="104.14" rot="R180"/>
 <instance part="SUPPLY11" gate="GND" x="-55.88" y="104.14"/>
 <instance part="SUPPLY15" gate="GND" x="-55.88" y="142.24" rot="R180"/>
 <instance part="SUPPLY16" gate="+5V" x="-60.96" y="142.24"/>
-<instance part="U$7" gate="G$1" x="-58.42" y="88.9" rot="R270"/>
 <instance part="U$8" gate="G$1" x="-99.06" y="-50.8"/>
 <instance part="SUPPLY4" gate="GND" x="-109.22" y="-63.5"/>
-<instance part="U$1" gate="G$1" x="-66.04" y="-15.24" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -5454,26 +5377,6 @@ amp on board?</text>
 <label x="-175.26" y="-20.32" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
-<net name="VCC" class="0">
-<segment>
-<pinref part="U$5" gate="G$1" pin="3.3V"/>
-<pinref part="P+1" gate="VCC" pin="VCC"/>
-<wire x1="-7.62" y1="55.88" x2="5.08" y2="55.88" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="R17" gate="G$1" pin="2"/>
-<pinref part="P+3" gate="VCC" pin="VCC"/>
-<pinref part="R19" gate="G$1" pin="2"/>
-<wire x1="-81.28" y1="12.7" x2="-76.2" y2="17.78" width="0.1524" layer="91"/>
-<junction x="-76.2" y="17.78"/>
-<wire x1="-76.2" y1="17.78" x2="-76.2" y2="15.24" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="U$12" gate="G$1" pin="LV"/>
-<pinref part="P+4" gate="VCC" pin="VCC"/>
-<wire x1="-60.96" y1="106.68" x2="-60.96" y2="109.22" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="GND" class="0">
 <segment>
 <pinref part="U$5" gate="G$1" pin="GND"/>
@@ -5534,6 +5437,7 @@ amp on board?</text>
 <segment>
 <pinref part="U$5" gate="G$1" pin="VIN"/>
 <pinref part="SUPPLY2" gate="+5V" pin="+5V"/>
+<wire x1="-5.08" y1="58.42" x2="-7.62" y2="58.42" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$11" gate="G$1" pin="P$1"/>
@@ -5659,18 +5563,6 @@ amp on board?</text>
 <wire x1="-71.12" y1="109.22" x2="-71.12" y2="58.42" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="I2C_SCL" class="0">
-<segment>
-<pinref part="U$5" gate="G$1" pin="22/A8/T/PWM/SCL1"/>
-<wire x1="-53.34" y1="5.08" x2="-63.5" y2="5.08" width="0.1524" layer="91"/>
-<pinref part="R17" gate="G$1" pin="1"/>
-<wire x1="-63.5" y1="5.08" x2="-76.2" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="-63.5" y1="5.08" x2="-63.5" y2="-7.62" width="0.1524" layer="91"/>
-<junction x="-63.5" y="5.08"/>
-<label x="-66.04" y="-5.08" size="1.778" layer="95"/>
-<pinref part="U$1" gate="G$1" pin="P$1"/>
-</segment>
-</net>
 <net name="A_WHAM" class="0">
 <segment>
 <pinref part="U$5" gate="G$1" pin="18/A4/T/SDA"/>
@@ -5683,26 +5575,13 @@ amp on board?</text>
 <label x="-83.82" y="-73.66" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
-<net name="I2C_SDA" class="0">
-<segment>
-<pinref part="U$5" gate="G$1" pin="23/A9/T/PWM/SDA1"/>
-<pinref part="R19" gate="G$1" pin="1"/>
-<wire x1="-81.28" y1="2.54" x2="-68.58" y2="2.54" width="0.1524" layer="91"/>
-<wire x1="-68.58" y1="2.54" x2="-53.34" y2="2.54" width="0.1524" layer="91"/>
-<wire x1="-68.58" y1="2.54" x2="-68.58" y2="-2.54" width="0.1524" layer="91"/>
-<label x="-78.74" y="-2.54" size="1.778" layer="95"/>
-<pinref part="U$1" gate="G$1" pin="P$2"/>
-<wire x1="-71.12" y1="-7.62" x2="-71.12" y2="-2.54" width="0.1524" layer="91"/>
-<wire x1="-71.12" y1="-2.54" x2="-68.58" y2="-2.54" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="SCREEN_BUSYLV" class="0">
 <segment>
 <pinref part="U$5" gate="G$1" pin="0/RX1/T/MOSI1"/>
 <wire x1="-53.34" y1="60.96" x2="-66.04" y2="60.96" width="0.1524" layer="91"/>
 <label x="-78.74" y="60.96" size="1.778" layer="95"/>
-<pinref part="U$7" gate="G$1" pin="P$2"/>
-<wire x1="-66.04" y1="83.82" x2="-66.04" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="-66.04" y1="109.22" x2="-66.04" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="U$12" gate="G$1" pin="LV2"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -5719,13 +5598,6 @@ amp on board?</text>
 <wire x1="-66.04" y1="137.16" x2="-66.04" y2="162.56" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="U$7" gate="G$1" pin="P$1"/>
-<pinref part="U$12" gate="G$1" pin="LV2"/>
-<wire x1="-66.04" y1="91.44" x2="-66.04" y2="109.22" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="ANALOG_ACTIVE" class="0">
 <segment>
 <pinref part="U$8" gate="G$1" pin="P$1"/>
@@ -5738,9 +5610,29 @@ amp on board?</text>
 <label x="-73.66" y="12.7" size="1.778" layer="95"/>
 </segment>
 </net>
+<net name="3VRAIL" class="0">
+<segment>
+<pinref part="U$5" gate="G$1" pin="3.3V"/>
+<wire x1="-7.62" y1="55.88" x2="5.08" y2="55.88" width="0.1524" layer="91"/>
+<label x="5.08" y="55.88" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$12" gate="G$1" pin="LV"/>
+<wire x1="-60.96" y1="106.68" x2="-60.96" y2="109.22" width="0.1524" layer="91"/>
+<label x="-60.96" y="101.6" size="1.778" layer="95" rot="R90"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="104,1,-7.62,55.88,U$5,3.3V,3VRAIL,,,"/>
+<approved hash="204,1,-7.62,10.16,U$5,26/A12/DAC,,,,"/>
+<approved hash="204,1,-7.62,40.64,U$5,AREF,,,,"/>
+<approved hash="204,1,-7.62,60.96,U$5,VUSB,,,,"/>
+<approved hash="104,1,-7.62,58.42,U$5,VIN,+5V,,,"/>
+<approved hash="113,1,3.36848,96.52,X1,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 <compatibility>

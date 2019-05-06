@@ -5284,6 +5284,12 @@ amp on board?</text>
 <text x="-180.34" y="-40.64" size="1.778" layer="91">audio header board? need a 7 pin connector...</text>
 <text x="-190.5" y="-43.18" size="1.778" layer="91">yeah, let's have an analog board. we can add it on later!</text>
 <text x="-109.22" y="-15.24" size="1.778" layer="91">trigger this with a voltage when you measure? saves power...</text>
+<text x="-109.22" y="-17.78" size="1.778" layer="91">pick a pin I guess...</text>
+<text x="-137.16" y="38.1" size="1.778" layer="91">can I use this pin?
+ arduino forum says Serial.begin dedicates the pins.
+ I'm not receiving data from the 1053b though...</text>
+<text x="-139.7" y="35.56" size="1.778" layer="91">so it should be fine to init it as an output after the fact?</text>
+<text x="-121.92" y="-2.54" size="1.778" layer="91">switch to 19 I guess. Just in case!</text>
 </plain>
 <instances>
 <instance part="U$5" gate="G$1" x="-30.48" y="33.02"/>
@@ -5714,10 +5720,16 @@ amp on board?</text>
 <wire x1="-66.04" y1="91.44" x2="-66.04" y2="109.22" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$2" class="0">
+<net name="ANALOG_ACTIVE" class="0">
 <segment>
 <pinref part="U$8" gate="G$1" pin="P$1"/>
 <wire x1="-114.3" y1="-58.42" x2="-114.3" y2="-71.12" width="0.1524" layer="91"/>
+<label x="-114.3" y="-81.28" size="1.778" layer="95" rot="R90"/>
+</segment>
+<segment>
+<pinref part="U$5" gate="G$1" pin="19/A5/T/SCL"/>
+<wire x1="-53.34" y1="12.7" x2="-68.58" y2="12.7" width="0.1524" layer="91"/>
+<label x="-73.66" y="12.7" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
