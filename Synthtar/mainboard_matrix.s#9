@@ -24597,6 +24597,8 @@ p(t) = 6mA * 5v = 30mW</text>
 <text x="-370.84" y="60.96" size="1.778" layer="91">lc adc uses 3.3v reference</text>
 <text x="-175.26" y="17.78" size="1.778" layer="91">internally this is also a 10k pot</text>
 <text x="-167.64" y="55.88" size="1.778" layer="91" rot="R90">pull up resistors, no current flowing most of the time</text>
+<text x="-165.1" y="53.34" size="1.778" layer="91" rot="R90">negligible current because it's just during transmission</text>
+<text x="50.8" y="50.8" size="1.778" layer="91">need to invert this first!~ optocoupler inverts on the other side</text>
 </plain>
 <instances>
 <instance part="S1" gate="1" x="-363.22" y="114.3" rot="R180"/>

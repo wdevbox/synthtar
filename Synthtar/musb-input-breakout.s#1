@@ -252,13 +252,13 @@
 <wire x1="5.08" y1="15.24" x2="5.08" y2="17.78" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$1" class="1">
+<net name="N$1" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="GND"/>
 <pinref part="X2" gate="-2" pin="KL"/>
 </segment>
 </net>
-<net name="N$2" class="1">
+<net name="N$2" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="5V"/>
 <pinref part="X2" gate="-1" pin="KL"/>

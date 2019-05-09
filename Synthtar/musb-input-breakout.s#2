@@ -232,12 +232,26 @@
 <instance part="U$1" gate="G$1" x="0" y="25.4"/>
 <instance part="X1" gate="-1" x="0" y="10.16" rot="R90"/>
 <instance part="X1" gate="-2" x="5.08" y="10.16" rot="R90"/>
-<instance part="X2" gate="-1" x="10.16" y="12.7" rot="R90"/>
-<instance part="X2" gate="-2" x="-10.16" y="12.7" rot="R90"/>
+<instance part="X2" gate="-1" x="-10.16" y="10.16" rot="R90"/>
+<instance part="X2" gate="-2" x="10.16" y="10.16" rot="R90"/>
 </instances>
 <busses>
 </busses>
 <nets>
+<net name="N$1" class="1">
+<segment>
+<pinref part="U$1" gate="G$1" pin="5V"/>
+<pinref part="X2" gate="-2" pin="KL"/>
+<wire x1="10.16" y1="15.24" x2="10.16" y2="17.78" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$2" class="1">
+<segment>
+<pinref part="U$1" gate="G$1" pin="GND"/>
+<pinref part="X2" gate="-1" pin="KL"/>
+<wire x1="-10.16" y1="15.24" x2="-10.16" y2="17.78" width="0.1524" layer="91"/>
+</segment>
+</net>
 <net name="N$3" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="D+"/>
@@ -250,18 +264,6 @@
 <pinref part="U$1" gate="G$1" pin="D-"/>
 <pinref part="X1" gate="-2" pin="KL"/>
 <wire x1="5.08" y1="15.24" x2="5.08" y2="17.78" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$1" class="1">
-<segment>
-<pinref part="U$1" gate="G$1" pin="GND"/>
-<pinref part="X2" gate="-2" pin="KL"/>
-</segment>
-</net>
-<net name="N$2" class="1">
-<segment>
-<pinref part="U$1" gate="G$1" pin="5V"/>
-<pinref part="X2" gate="-1" pin="KL"/>
 </segment>
 </net>
 </nets>
