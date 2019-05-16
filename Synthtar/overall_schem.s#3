@@ -16020,6 +16020,8 @@ p=vi=5*13.6mA=68.18mW</text>
 <wire x1="-375.92" y1="-2.54" x2="-434.34" y2="-2.54" width="0.1524" layer="97"/>
 <wire x1="-434.34" y1="-2.54" x2="-434.34" y2="66.04" width="0.1524" layer="97"/>
 <wire x1="-434.34" y1="66.04" x2="-375.92" y2="66.04" width="0.1524" layer="97"/>
+<text x="129.54" y="91.44" size="1.778" layer="97">5mA*5v=25mW (playing)</text>
+<text x="93.98" y="91.44" size="1.778" layer="97">2mA*5v=10mW (idle)</text>
 </plain>
 <instances>
 <instance part="S1" gate="1" x="-363.22" y="114.3" rot="R180"/>

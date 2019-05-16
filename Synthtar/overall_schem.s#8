@@ -15893,9 +15893,9 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <text x="-147.32" y="76.2" size="1.778" layer="97">reserved for i2c</text>
 <text x="-157.48" y="208.28" size="1.778" layer="97">d+</text>
 <text x="-162.56" y="208.28" size="1.778" layer="97">d-</text>
-<text x="165.1" y="-27.94" size="5.08" layer="97">BLAKE NEMETH</text>
+<text x="-210.82" y="-27.94" size="5.08" layer="97">BLAKE NEMETH</text>
 <text x="162.56" y="203.2" size="1.778" layer="91">amp on</text>
-<text x="7.62" y="-114.3" size="1.778" layer="91">amp power indicator</text>
+<text x="220.98" y="7.62" size="1.778" layer="91">amp power indicator</text>
 <wire x1="-375.92" y1="137.16" x2="-259.08" y2="137.16" width="0.1524" layer="97"/>
 <wire x1="-259.08" y1="137.16" x2="-259.08" y2="71.12" width="0.1524" layer="97"/>
 <wire x1="-259.08" y1="71.12" x2="-375.92" y2="71.12" width="0.1524" layer="97"/>
@@ -15937,20 +15937,20 @@ Playing sound at average volume (40) draws an additional 3mA.</text>
 <text x="-312.42" y="68.58" size="1.778" layer="91">Use a shift register to control indicators?</text>
 <text x="-190.5" y="116.84" size="1.778" layer="91">10ks here because 100k makes 
 RC time constant with pin too high</text>
-<text x="15.24" y="-78.74" size="1.778" layer="91">2M Indicator</text>
-<text x="15.24" y="-96.52" size="1.778" layer="91">4M_indicator</text>
-<text x="12.7" y="-60.96" size="1.778" layer="91">power indicator</text>
-<wire x1="-88.9" y1="-48.26" x2="38.1" y2="-48.26" width="0.1524" layer="97"/>
-<wire x1="38.1" y1="-48.26" x2="38.1" y2="-152.4" width="0.1524" layer="97"/>
-<wire x1="38.1" y1="-152.4" x2="-88.9" y2="-152.4" width="0.1524" layer="97"/>
-<wire x1="-88.9" y1="-152.4" x2="-88.9" y2="-48.26" width="0.1524" layer="97"/>
-<text x="-53.34" y="-50.8" size="1.778" layer="97">each LED draws about 1.5mA at 30% duty cycle</text>
-<text x="-53.34" y="-53.34" size="1.778" layer="97">p(LED) = 3v * 1.5mA = 4.5mW</text>
-<text x="-53.34" y="-55.88" size="1.778" layer="97">p(r) = 1.5mA*2v = 3mW</text>
-<text x="-53.34" y="-58.42" size="1.778" layer="97">eff = 4.5/7.5=60%</text>
-<text x="-83.82" y="-104.14" size="1.778" layer="97">all leds on: I(t) = 1.5mA * 4 = 6mA
+<text x="228.6" y="43.18" size="1.778" layer="91">2M Indicator</text>
+<text x="228.6" y="25.4" size="1.778" layer="91">4M_indicator</text>
+<text x="226.06" y="60.96" size="1.778" layer="91">power indicator</text>
+<wire x1="124.46" y1="73.66" x2="251.46" y2="73.66" width="0.1524" layer="97"/>
+<wire x1="251.46" y1="73.66" x2="251.46" y2="-30.48" width="0.1524" layer="97"/>
+<wire x1="251.46" y1="-30.48" x2="124.46" y2="-30.48" width="0.1524" layer="97"/>
+<wire x1="124.46" y1="-30.48" x2="124.46" y2="73.66" width="0.1524" layer="97"/>
+<text x="160.02" y="71.12" size="1.778" layer="97">each LED draws about 1.5mA at 30% duty cycle</text>
+<text x="160.02" y="68.58" size="1.778" layer="97">p(LED) = 3v * 1.5mA = 4.5mW</text>
+<text x="160.02" y="66.04" size="1.778" layer="97">p(r) = 1.5mA*2v = 3mW</text>
+<text x="160.02" y="63.5" size="1.778" layer="97">eff = 4.5/7.5=60%</text>
+<text x="129.54" y="17.78" size="1.778" layer="97">all leds on: I(t) = 1.5mA * 4 = 6mA
 p(t) = 6mA * 5v = 30mW</text>
-<text x="-83.82" y="-109.22" size="1.778" layer="97">IC current is negligible (datasheet lists as 8uA)</text>
+<text x="129.54" y="12.7" size="1.778" layer="97">IC current is negligible (datasheet lists as 8uA)</text>
 <text x="-5.08" y="99.06" size="1.778" layer="97">need to measure this current</text>
 <text x="-137.16" y="40.64" size="1.778" layer="97">ADD DECOUPLING CAPS</text>
 <text x="93.98" y="-20.32" size="1.778" layer="91" rot="R180">contrast adjust</text>
@@ -15963,27 +15963,27 @@ p(t) = 6mA * 5v = 30mW</text>
 <text x="215.9" y="182.88" size="1.778" layer="91">need to invert this first!~ optocoupler inverts on the other side</text>
 <text x="111.76" y="175.26" size="1.778" layer="91">make this an spdt and add a header to connect the signal to the screenboard</text>
 <text x="-132.08" y="152.4" size="1.778" layer="91">not used in initial prototype</text>
-<text x="-27.94" y="-63.5" size="1.778" layer="91">d7</text>
-<text x="-25.4" y="-81.28" size="1.778" layer="91">d8</text>
-<text x="-27.94" y="-96.52" size="1.778" layer="91">d9</text>
+<text x="185.42" y="58.42" size="1.778" layer="91">d7</text>
+<text x="187.96" y="40.64" size="1.778" layer="91">d8</text>
+<text x="185.42" y="25.4" size="1.778" layer="91">d9</text>
 <wire x1="121.92" y1="-45.72" x2="121.92" y2="78.74" width="0.1524" layer="97"/>
 <wire x1="121.92" y1="78.74" x2="-88.9" y2="78.74" width="0.1524" layer="97"/>
-<text x="40.64" y="-66.04" size="1.778" layer="97">power - green</text>
-<text x="43.18" y="-78.74" size="1.778" layer="97">m2 - red</text>
-<text x="43.18" y="-96.52" size="1.778" layer="97">m4  -red</text>
-<text x="43.18" y="-114.3" size="1.778" layer="97">amp - blue</text>
-<text x="58.42" y="-63.5" size="1.778" layer="97">vf = 3.1v</text>
-<text x="58.42" y="-76.2" size="1.778" layer="97">vf = 2v</text>
-<text x="58.42" y="-93.98" size="1.778" layer="97">vf = 2v</text>
-<text x="58.42" y="-111.76" size="1.778" layer="97">vf = 2.9v</text>
-<text x="58.42" y="-66.04" size="1.778" layer="97">vr = 2.9v</text>
-<text x="58.42" y="-114.3" size="1.778" layer="97">vr = 3.1v</text>
-<text x="58.42" y="-78.74" size="1.778" layer="97">vr = 3v</text>
-<text x="58.42" y="-96.52" size="1.778" layer="97">vr = 3v</text>
-<text x="73.66" y="-66.04" size="1.778" layer="97">2.9/5mA = 580</text>
-<text x="73.66" y="-76.2" size="1.778" layer="97">3/5mA = 600</text>
-<text x="73.66" y="-93.98" size="1.778" layer="97">3/5mA = 600</text>
-<text x="76.2" y="-111.76" size="1.778" layer="97">3.1/5mA=620</text>
+<text x="254" y="55.88" size="1.778" layer="97">power - green</text>
+<text x="256.54" y="43.18" size="1.778" layer="97">m2 - red</text>
+<text x="254" y="20.32" size="1.778" layer="97">m4  -red</text>
+<text x="256.54" y="7.62" size="1.778" layer="97">amp - blue</text>
+<text x="271.78" y="58.42" size="1.778" layer="97">vf = 3.1v</text>
+<text x="269.24" y="45.72" size="1.778" layer="97">vf = 2v</text>
+<text x="264.16" y="22.86" size="1.778" layer="97">vf = 2v</text>
+<text x="271.78" y="10.16" size="1.778" layer="97">vf = 2.9v</text>
+<text x="271.78" y="55.88" size="1.778" layer="97">vr = 2.9v</text>
+<text x="271.78" y="7.62" size="1.778" layer="97">vr = 3.1v</text>
+<text x="269.24" y="43.18" size="1.778" layer="97">vr = 3v</text>
+<text x="264.16" y="20.32" size="1.778" layer="97">vr = 3v</text>
+<text x="284.48" y="55.88" size="1.778" layer="97">2.9/5mA = 580</text>
+<text x="279.4" y="43.18" size="1.778" layer="97">3/5mA = 600</text>
+<text x="274.32" y="20.32" size="1.778" layer="97">3/5mA = 600</text>
+<text x="284.48" y="7.62" size="1.778" layer="97">3.1/5mA=620</text>
 <text x="-86.36" y="-20.32" size="1.778" layer="97">screen + indicators</text>
 <text x="66.04" y="-27.94" size="1.778" layer="97">5v^2/10k=2.5mW</text>
 <text x="55.88" y="38.1" size="1.778" layer="97">5v-2v/220=i=13.6mA
@@ -16101,27 +16101,27 @@ p=vi=5*13.6mA=68.18mW</text>
 <instance part="D17" gate="G$1" x="-304.8" y="101.6" rot="R270"/>
 <instance part="S19" gate="1" x="-281.94" y="111.76" rot="R180"/>
 <instance part="D18" gate="G$1" x="-281.94" y="101.6" rot="R270"/>
-<instance part="IC2" gate="A" x="-7.62" y="-68.58"/>
-<instance part="IC2" gate="B" x="-7.62" y="-83.82"/>
-<instance part="IC2" gate="C" x="-7.62" y="-101.6"/>
-<instance part="IC2" gate="D" x="-7.62" y="-119.38"/>
-<instance part="IC2" gate="P" x="-7.62" y="-129.54" rot="R270"/>
-<instance part="LED3" gate="G$1" x="5.08" y="-68.58" rot="R90"/>
-<instance part="R5" gate="G$1" x="17.78" y="-68.58"/>
-<instance part="SUPPLY14" gate="GND" x="25.4" y="-68.58" rot="R90"/>
-<instance part="LED4" gate="G$1" x="5.08" y="-83.82" rot="R90"/>
-<instance part="R6" gate="G$1" x="17.78" y="-83.82"/>
-<instance part="SUPPLY15" gate="GND" x="25.4" y="-83.82" rot="R90"/>
-<instance part="LED5" gate="G$1" x="5.08" y="-101.6" rot="R90"/>
-<instance part="R7" gate="G$1" x="17.78" y="-101.6"/>
-<instance part="SUPPLY20" gate="GND" x="25.4" y="-101.6" rot="R90"/>
-<instance part="LED6" gate="G$1" x="5.08" y="-119.38" rot="R90"/>
-<instance part="R8" gate="G$1" x="17.78" y="-119.38"/>
-<instance part="SUPPLY30" gate="GND" x="25.4" y="-119.38" rot="R90"/>
+<instance part="IC2" gate="A" x="205.74" y="53.34"/>
+<instance part="IC2" gate="B" x="205.74" y="38.1"/>
+<instance part="IC2" gate="C" x="205.74" y="20.32"/>
+<instance part="IC2" gate="D" x="205.74" y="2.54"/>
+<instance part="IC2" gate="P" x="205.74" y="-7.62" rot="R270"/>
+<instance part="LED3" gate="G$1" x="218.44" y="53.34" rot="R90"/>
+<instance part="R5" gate="G$1" x="231.14" y="53.34"/>
+<instance part="SUPPLY14" gate="GND" x="238.76" y="53.34" rot="R90"/>
+<instance part="LED4" gate="G$1" x="218.44" y="38.1" rot="R90"/>
+<instance part="R6" gate="G$1" x="231.14" y="38.1"/>
+<instance part="SUPPLY15" gate="GND" x="238.76" y="38.1" rot="R90"/>
+<instance part="LED5" gate="G$1" x="218.44" y="20.32" rot="R90"/>
+<instance part="R7" gate="G$1" x="231.14" y="20.32"/>
+<instance part="SUPPLY20" gate="GND" x="238.76" y="20.32" rot="R90"/>
+<instance part="LED6" gate="G$1" x="218.44" y="2.54" rot="R90"/>
+<instance part="R8" gate="G$1" x="231.14" y="2.54"/>
+<instance part="SUPPLY30" gate="GND" x="238.76" y="2.54" rot="R90"/>
 <instance part="IC4" gate="A" x="220.98" y="175.26"/>
 <instance part="IC4" gate="P" x="205.74" y="180.34" rot="R180"/>
-<instance part="SUPPLY19" gate="GND" x="-27.94" y="-129.54" rot="R270"/>
-<instance part="SUPPLY28" gate="+5V" x="10.16" y="-129.54" rot="R270"/>
+<instance part="SUPPLY19" gate="GND" x="185.42" y="-7.62" rot="R270"/>
+<instance part="SUPPLY28" gate="+5V" x="223.52" y="-7.62" rot="R270"/>
 <instance part="SUPPLY29" gate="+5V" x="205.74" y="167.64" rot="R180"/>
 <instance part="SUPPLY34" gate="GND" x="205.74" y="193.04" rot="R180"/>
 <instance part="U$6" gate="G$1" x="-50.8" y="10.16"/>
@@ -16139,8 +16139,8 @@ p=vi=5*13.6mA=68.18mW</text>
 <instance part="SUPPLY44" gate="+5V" x="-30.48" y="10.16" rot="R270"/>
 <instance part="S20" gate="1" x="-121.92" y="157.48"/>
 <instance part="U$13" gate="G$1" x="43.18" y="12.7" rot="R270"/>
-<instance part="C3" gate="G$1" x="-7.62" y="-139.7" rot="R90"/>
-<instance part="C4" gate="G$1" x="-7.62" y="-147.32" rot="R90"/>
+<instance part="C3" gate="G$1" x="205.74" y="-17.78" rot="R90"/>
+<instance part="C4" gate="G$1" x="205.74" y="-25.4" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -16563,7 +16563,7 @@ p=vi=5*13.6mA=68.18mW</text>
 </segment>
 <segment>
 <pinref part="IC2" gate="P" pin="VSS"/>
-<wire x1="-25.4" y1="-129.54" x2="-15.24" y2="-129.54" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="-7.62" x2="198.12" y2="-7.62" width="0.1524" layer="91"/>
 <pinref part="SUPPLY19" gate="GND" pin="GND"/>
 </segment>
 <segment>
@@ -16623,7 +16623,7 @@ p=vi=5*13.6mA=68.18mW</text>
 </segment>
 <segment>
 <pinref part="IC2" gate="P" pin="VDD"/>
-<wire x1="7.62" y1="-129.54" x2="0" y2="-129.54" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="-7.62" x2="213.36" y2="-7.62" width="0.1524" layer="91"/>
 <pinref part="SUPPLY28" gate="+5V" pin="+5V"/>
 </segment>
 <segment>
@@ -16710,8 +16710,8 @@ p=vi=5*13.6mA=68.18mW</text>
 </segment>
 <segment>
 <pinref part="IC2" gate="D" pin="I0"/>
-<wire x1="-15.24" y1="-116.84" x2="-30.48" y2="-116.84" width="0.1524" layer="91"/>
-<label x="-38.1" y="-114.3" size="1.778" layer="95"/>
+<wire x1="198.12" y1="5.08" x2="182.88" y2="5.08" width="0.1524" layer="91"/>
+<label x="175.26" y="7.62" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="A_ACTIVE" class="0">
@@ -17001,23 +17001,23 @@ p=vi=5*13.6mA=68.18mW</text>
 <net name="N$14" class="0">
 <segment>
 <pinref part="IC2" gate="A" pin="I0"/>
-<wire x1="-40.64" y1="-66.04" x2="-15.24" y2="-66.04" width="0.1524" layer="91"/>
+<wire x1="172.72" y1="55.88" x2="198.12" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$17" class="0">
 <segment>
-<wire x1="-40.64" y1="-68.58" x2="-27.94" y2="-68.58" width="0.1524" layer="91"/>
-<wire x1="-27.94" y1="-68.58" x2="-27.94" y2="-81.28" width="0.1524" layer="91"/>
+<wire x1="172.72" y1="53.34" x2="185.42" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="185.42" y1="53.34" x2="185.42" y2="40.64" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="B" pin="I0"/>
-<wire x1="-27.94" y1="-81.28" x2="-15.24" y2="-81.28" width="0.1524" layer="91"/>
+<wire x1="185.42" y1="40.64" x2="198.12" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$49" class="0">
 <segment>
-<wire x1="-40.64" y1="-71.12" x2="-30.48" y2="-71.12" width="0.1524" layer="91"/>
-<wire x1="-30.48" y1="-71.12" x2="-30.48" y2="-99.06" width="0.1524" layer="91"/>
+<wire x1="172.72" y1="50.8" x2="182.88" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="182.88" y1="50.8" x2="182.88" y2="22.86" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="C" pin="I0"/>
-<wire x1="-30.48" y1="-99.06" x2="-15.24" y2="-99.06" width="0.1524" layer="91"/>
+<wire x1="182.88" y1="22.86" x2="198.12" y2="22.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$9" class="0">
@@ -17029,7 +17029,7 @@ p=vi=5*13.6mA=68.18mW</text>
 <net name="N$47" class="0">
 <segment>
 <pinref part="LED3" gate="G$1" pin="A"/>
-<wire x1="0" y1="-68.58" x2="2.54" y2="-68.58" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="53.34" x2="215.9" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="A" pin="O"/>
 </segment>
 </net>
@@ -17037,13 +17037,13 @@ p=vi=5*13.6mA=68.18mW</text>
 <segment>
 <pinref part="R5" gate="G$1" pin="1"/>
 <pinref part="LED3" gate="G$1" pin="C"/>
-<wire x1="12.7" y1="-68.58" x2="10.16" y2="-68.58" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="53.34" x2="223.52" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$51" class="0">
 <segment>
 <pinref part="LED4" gate="G$1" pin="A"/>
-<wire x1="0" y1="-83.82" x2="2.54" y2="-83.82" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="38.1" x2="215.9" y2="38.1" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="B" pin="O"/>
 </segment>
 </net>
@@ -17051,13 +17051,13 @@ p=vi=5*13.6mA=68.18mW</text>
 <segment>
 <pinref part="R6" gate="G$1" pin="1"/>
 <pinref part="LED4" gate="G$1" pin="C"/>
-<wire x1="12.7" y1="-83.82" x2="10.16" y2="-83.82" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="38.1" x2="223.52" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$55" class="0">
 <segment>
 <pinref part="LED5" gate="G$1" pin="A"/>
-<wire x1="0" y1="-101.6" x2="2.54" y2="-101.6" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="20.32" x2="215.9" y2="20.32" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="C" pin="O"/>
 </segment>
 </net>
@@ -17065,13 +17065,13 @@ p=vi=5*13.6mA=68.18mW</text>
 <segment>
 <pinref part="R7" gate="G$1" pin="1"/>
 <pinref part="LED5" gate="G$1" pin="C"/>
-<wire x1="12.7" y1="-101.6" x2="10.16" y2="-101.6" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="20.32" x2="223.52" y2="20.32" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$57" class="0">
 <segment>
 <pinref part="LED6" gate="G$1" pin="A"/>
-<wire x1="0" y1="-119.38" x2="2.54" y2="-119.38" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="2.54" x2="215.9" y2="2.54" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="D" pin="O"/>
 </segment>
 </net>
@@ -17079,29 +17079,29 @@ p=vi=5*13.6mA=68.18mW</text>
 <segment>
 <pinref part="R8" gate="G$1" pin="1"/>
 <pinref part="LED6" gate="G$1" pin="C"/>
-<wire x1="12.7" y1="-119.38" x2="10.16" y2="-119.38" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="2.54" x2="223.52" y2="2.54" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="IND_PWM" class="0">
 <segment>
 <pinref part="IC2" gate="D" pin="I1"/>
-<wire x1="-15.24" y1="-121.92" x2="-25.4" y2="-121.92" width="0.1524" layer="91"/>
-<label x="-30.48" y="-121.92" size="1.778" layer="95"/>
+<wire x1="198.12" y1="0" x2="187.96" y2="0" width="0.1524" layer="91"/>
+<label x="182.88" y="0" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="IC2" gate="C" pin="I1"/>
-<wire x1="-15.24" y1="-104.14" x2="-22.86" y2="-104.14" width="0.1524" layer="91"/>
-<label x="-33.02" y="-104.14" size="1.778" layer="95"/>
+<wire x1="198.12" y1="17.78" x2="190.5" y2="17.78" width="0.1524" layer="91"/>
+<label x="180.34" y="17.78" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="IC2" gate="B" pin="I1"/>
-<wire x1="-15.24" y1="-86.36" x2="-22.86" y2="-86.36" width="0.1524" layer="91"/>
-<label x="-27.94" y="-86.36" size="1.778" layer="95"/>
+<wire x1="198.12" y1="35.56" x2="190.5" y2="35.56" width="0.1524" layer="91"/>
+<label x="185.42" y="35.56" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="IC2" gate="A" pin="I1"/>
-<wire x1="-15.24" y1="-71.12" x2="-22.86" y2="-71.12" width="0.1524" layer="91"/>
-<label x="-27.94" y="-71.12" size="1.778" layer="95"/>
+<wire x1="198.12" y1="50.8" x2="190.5" y2="50.8" width="0.1524" layer="91"/>
+<label x="185.42" y="50.8" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="M1" gate="G$1" pin="D5"/>
@@ -17331,23 +17331,23 @@ p=vi=5*13.6mA=68.18mW</text>
 <net name="GND1" class="0">
 <segment>
 <pinref part="C3" gate="G$1" pin="2"/>
-<wire x1="-2.54" y1="-139.7" x2="0" y2="-139.7" width="0.1524" layer="91"/>
-<wire x1="0" y1="-139.7" x2="0" y2="-132.08" width="0.1524" layer="91"/>
+<wire x1="210.82" y1="-17.78" x2="213.36" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="-17.78" x2="213.36" y2="-10.16" width="0.1524" layer="91"/>
 <pinref part="C4" gate="G$1" pin="2"/>
-<wire x1="-2.54" y1="-147.32" x2="0" y2="-147.32" width="0.1524" layer="91"/>
-<wire x1="0" y1="-147.32" x2="0" y2="-139.7" width="0.1524" layer="91"/>
-<junction x="0" y="-139.7"/>
+<wire x1="210.82" y1="-25.4" x2="213.36" y2="-25.4" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="-25.4" x2="213.36" y2="-17.78" width="0.1524" layer="91"/>
+<junction x="213.36" y="-17.78"/>
 </segment>
 </net>
 <net name="+5V1" class="0">
 <segment>
 <pinref part="C3" gate="G$1" pin="1"/>
-<wire x1="-10.16" y1="-139.7" x2="-15.24" y2="-139.7" width="0.1524" layer="91"/>
-<wire x1="-15.24" y1="-139.7" x2="-15.24" y2="-132.08" width="0.1524" layer="91"/>
+<wire x1="203.2" y1="-17.78" x2="198.12" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="-17.78" x2="198.12" y2="-10.16" width="0.1524" layer="91"/>
 <pinref part="C4" gate="G$1" pin="1"/>
-<wire x1="-10.16" y1="-147.32" x2="-15.24" y2="-147.32" width="0.1524" layer="91"/>
-<wire x1="-15.24" y1="-147.32" x2="-15.24" y2="-139.7" width="0.1524" layer="91"/>
-<junction x="-15.24" y="-139.7"/>
+<wire x1="203.2" y1="-25.4" x2="198.12" y2="-25.4" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="-25.4" x2="198.12" y2="-17.78" width="0.1524" layer="91"/>
+<junction x="198.12" y="-17.78"/>
 </segment>
 </net>
 <net name="N$64" class="0">

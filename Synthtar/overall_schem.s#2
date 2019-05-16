@@ -15990,7 +15990,7 @@ p=vi=5*13.6mA=68.18mW</text>
 <text x="-66.04" y="50.8" size="1.778" layer="97">idle draw about 20mA because I haven't modded my nano yet</text>
 <text x="-66.04" y="45.72" size="1.778" layer="97">5v*20mA=100mW</text>
 <text x="-66.04" y="-5.08" size="1.778" layer="97">negligible current, uses FETs</text>
-<text x="58.42" y="93.98" size="1.778" layer="97">~20mA
+<text x="45.72" y="83.82" size="1.778" layer="97">~20mA for all of this, never did individual measurements on each component
 5v*20mA=100mW</text>
 <text x="114.3" y="170.18" size="1.778" layer="97">.5mA leakage when amp off - 
 5*.5mA = 2.5mW</text>

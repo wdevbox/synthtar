@@ -15956,8 +15956,8 @@ p(t) = 6mA * 5v = 30mW</text>
 <wire x1="307.34" y1="142.24" x2="195.58" y2="142.24" width="0.1524" layer="97"/>
 <text x="-370.84" y="60.96" size="1.778" layer="91">lc adc uses 3.3v reference</text>
 <text x="-419.1" y="12.7" size="1.778" layer="91">internally this is also a 10k pot</text>
-<text x="-167.64" y="55.88" size="1.778" layer="91" rot="R90">pull up resistors, no current flowing most of the time</text>
-<text x="-165.1" y="53.34" size="1.778" layer="91" rot="R90">negligible current because it's just during transmission</text>
+<text x="-177.8" y="48.26" size="1.778" layer="91" rot="R90">pull up resistors, no current flowing most of the time</text>
+<text x="-180.34" y="48.26" size="1.778" layer="91" rot="R90">negligible current because it's just during transmission</text>
 <text x="215.9" y="182.88" size="1.778" layer="91">need to invert this first!~ optocoupler inverts on the other side</text>
 <text x="111.76" y="175.26" size="1.778" layer="91">make this an spdt and add a header to connect the signal to the screenboard</text>
 <text x="-132.08" y="152.4" size="1.778" layer="91">not used in initial prototype</text>

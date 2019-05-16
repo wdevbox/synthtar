@@ -15829,7 +15829,7 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <part name="D18" library="SparkFun-DiscreteSemi" deviceset="DIODE" device="-1N4148" value="200mA/100V/1V"/>
 <part name="IC2" library="40xx" library_urn="urn:adsk.eagle:library:80" deviceset="4081" device="N" package3d_urn="urn:adsk.eagle:package:820/2"/>
 <part name="LED3" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="5MM" package3d_urn="urn:adsk.eagle:package:15799/2"/>
-<part name="R5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0204/7" package3d_urn="urn:adsk.eagle:package:23498/1" value="580"/>
+<part name="R5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0204/7" package3d_urn="urn:adsk.eagle:package:23498/1" value="380"/>
 <part name="SUPPLY14" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="LED4" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="5MM" package3d_urn="urn:adsk.eagle:package:15799/2"/>
 <part name="R6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0204/7" package3d_urn="urn:adsk.eagle:package:23498/1" value="600"/>
@@ -15838,7 +15838,7 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <part name="R7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0204/7" package3d_urn="urn:adsk.eagle:package:23498/1" value="600"/>
 <part name="SUPPLY20" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="LED6" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="5MM" package3d_urn="urn:adsk.eagle:package:15799/2"/>
-<part name="R8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0204/7" package3d_urn="urn:adsk.eagle:package:23498/1" value="620"/>
+<part name="R8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0204/7" package3d_urn="urn:adsk.eagle:package:23498/1" value="420"/>
 <part name="SUPPLY30" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="IC4" library="40xx" library_urn="urn:adsk.eagle:library:80" deviceset="4081" device="N" package3d_urn="urn:adsk.eagle:package:820/2"/>
 <part name="SUPPLY19" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
@@ -15974,14 +15974,14 @@ p(t) = 6mA * 5v = 30mW</text>
 <text x="269.24" y="45.72" size="1.778" layer="97">vf = 2v</text>
 <text x="264.16" y="22.86" size="1.778" layer="97">vf = 2v</text>
 <text x="271.78" y="10.16" size="1.778" layer="97">vf = 2.9v</text>
-<text x="271.78" y="55.88" size="1.778" layer="97">vr = 2.9v</text>
-<text x="271.78" y="7.62" size="1.778" layer="97">vr = 3.1v</text>
+<text x="271.78" y="55.88" size="1.778" layer="97">vr = 1.9v</text>
+<text x="271.78" y="7.62" size="1.778" layer="97">vr = 2.1v</text>
 <text x="269.24" y="43.18" size="1.778" layer="97">vr = 3v</text>
 <text x="264.16" y="20.32" size="1.778" layer="97">vr = 3v</text>
-<text x="284.48" y="55.88" size="1.778" layer="97">2.9/5mA = 580</text>
+<text x="284.48" y="55.88" size="1.778" layer="97">1.9/5mA = 380</text>
 <text x="279.4" y="43.18" size="1.778" layer="97">3/5mA = 600</text>
 <text x="274.32" y="20.32" size="1.778" layer="97">3/5mA = 600</text>
-<text x="284.48" y="7.62" size="1.778" layer="97">3.1/5mA=620</text>
+<text x="284.48" y="7.62" size="1.778" layer="97">2.1/5mA=420</text>
 <text x="-86.36" y="-20.32" size="1.778" layer="97">screen + indicators</text>
 <text x="66.04" y="-27.94" size="1.778" layer="97">5v^2/10k=2.5mW</text>
 <text x="55.88" y="38.1" size="1.778" layer="97">5v-2v/220=i=13.6mA

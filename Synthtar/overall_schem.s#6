@@ -15872,7 +15872,7 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <wire x1="-185.42" y1="213.36" x2="-248.92" y2="213.36" width="0.1524" layer="97"/>
 <text x="-132.08" y="195.58" size="1.778" layer="91">BATTERY HERE</text>
 <text x="-167.64" y="175.26" size="1.778" layer="91">CHARGE HERE</text>
-<text x="-134.62" y="66.04" size="1.778" layer="91">over 3.3v on the digital pins can fry teensy lc...</text>
+<text x="-132.08" y="48.26" size="1.778" layer="91">over 3.3v on the digital pins can fry teensy lc...</text>
 <wire x1="-172.72" y1="205.74" x2="-58.42" y2="205.74" width="0.1524" layer="97"/>
 <wire x1="-58.42" y1="205.74" x2="-58.42" y2="144.78" width="0.1524" layer="97"/>
 <wire x1="-58.42" y1="144.78" x2="-172.72" y2="144.78" width="0.1524" layer="97"/>

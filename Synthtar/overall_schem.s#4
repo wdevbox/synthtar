@@ -15933,7 +15933,7 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 Playing sound at average volume (40) draws an additional 3mA.</text>
 <text x="50.8" y="208.28" size="1.778" layer="91">may need a distribution amp here to isolate</text>
 <text x="45.72" y="213.36" size="1.778" layer="91">if you plug in headphones while amp is playing it can shock the vs1053b</text>
-<text x="-190.5" y="116.84" size="1.778" layer="91">10ks here because 100k makes 
+<text x="-231.14" y="73.66" size="1.778" layer="91">10ks here because 100k makes 
 RC time constant with pin too high</text>
 <text x="228.6" y="43.18" size="1.778" layer="91">2M Indicator</text>
 <text x="228.6" y="25.4" size="1.778" layer="91">4M_indicator</text>

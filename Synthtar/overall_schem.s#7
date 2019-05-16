@@ -15928,13 +15928,11 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <text x="-312.42" y="5.08" size="1.778" layer="91">It = .33mA * 5 = 1.65mA</text>
 <text x="-353.06" y="55.88" size="1.778" layer="91">P = 3.3^2/10000 = 1.089mW</text>
 <text x="-312.42" y="0" size="1.778" layer="91">Pt(Analog) = 1.089mW * 5 = 5.445mW</text>
-<text x="-363.22" y="73.66" size="1.778" layer="91">rethinking these, may do mechanical switch because i don't like how the latching switches feel</text>
 <text x="218.44" y="149.86" size="1.778" layer="91">thinking about replacing this midi jack with usb midi functionality</text>
 <text x="91.44" y="96.52" size="1.778" layer="91">Draws ~2mA while active and not playing sound.
 Playing sound at average volume (40) draws an additional 3mA.</text>
 <text x="50.8" y="208.28" size="1.778" layer="91">may need a distribution amp here to isolate</text>
 <text x="45.72" y="213.36" size="1.778" layer="91">if you plug in headphones while amp is playing it can shock the vs1053b</text>
-<text x="-312.42" y="68.58" size="1.778" layer="91">Use a shift register to control indicators?</text>
 <text x="-190.5" y="116.84" size="1.778" layer="91">10ks here because 100k makes 
 RC time constant with pin too high</text>
 <text x="228.6" y="43.18" size="1.778" layer="91">2M Indicator</text>

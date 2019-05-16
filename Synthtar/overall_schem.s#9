@@ -15957,7 +15957,7 @@ p(t) = 6mA * 5v = 30mW</text>
 <text x="22.86" y="0" size="1.778" layer="91" rot="R90">backlight power</text>
 <wire x1="307.34" y1="142.24" x2="195.58" y2="142.24" width="0.1524" layer="97"/>
 <text x="-370.84" y="60.96" size="1.778" layer="91">lc adc uses 3.3v reference</text>
-<text x="-365.76" y="-48.26" size="1.778" layer="91">internally this is also a 10k pot</text>
+<text x="-419.1" y="12.7" size="1.778" layer="91">internally this is also a 10k pot</text>
 <text x="-167.64" y="55.88" size="1.778" layer="91" rot="R90">pull up resistors, no current flowing most of the time</text>
 <text x="-165.1" y="53.34" size="1.778" layer="91" rot="R90">negligible current because it's just during transmission</text>
 <text x="215.9" y="182.88" size="1.778" layer="91">need to invert this first!~ optocoupler inverts on the other side</text>
@@ -16019,6 +16019,9 @@ p=vi=5*13.6mA=68.18mW</text>
 <text x="218.44" y="144.78" size="1.778" layer="97">prototype has usb midi</text>
 <text x="-76.2" y="88.9" size="1.778" layer="97">p=vi -&gt; i = p/v
 390.21mW/5v = 78mA</text>
+<wire x1="-375.92" y1="-2.54" x2="-434.34" y2="-2.54" width="0.1524" layer="97"/>
+<wire x1="-434.34" y1="-2.54" x2="-434.34" y2="66.04" width="0.1524" layer="97"/>
+<wire x1="-434.34" y1="66.04" x2="-375.92" y2="66.04" width="0.1524" layer="97"/>
 </plain>
 <instances>
 <instance part="S1" gate="1" x="-363.22" y="114.3" rot="R180"/>
@@ -16130,8 +16133,8 @@ p=vi=5*13.6mA=68.18mW</text>
 <instance part="R3" gate="G$1" x="73.66" y="-15.24" rot="R90"/>
 <instance part="SUPPLY39" gate="+5V" x="60.96" y="-15.24" rot="R90"/>
 <instance part="SUPPLY40" gate="GND" x="88.9" y="-15.24" rot="R90"/>
-<instance part="U1" gate="G$1" x="-342.9" y="-27.94"/>
-<instance part="SUPPLY42" gate="GND" x="-358.14" y="-22.86" rot="R270"/>
+<instance part="U1" gate="G$1" x="-396.24" y="33.02"/>
+<instance part="SUPPLY42" gate="GND" x="-411.48" y="38.1" rot="R270"/>
 <instance part="SUPPLY43" gate="GND" x="-30.48" y="7.62" rot="R90"/>
 <instance part="SUPPLY44" gate="+5V" x="-30.48" y="10.16" rot="R270"/>
 <instance part="S20" gate="1" x="-121.92" y="157.48"/>
@@ -16586,7 +16589,7 @@ p=vi=5*13.6mA=68.18mW</text>
 <segment>
 <pinref part="U1" gate="G$1" pin="V-"/>
 <pinref part="SUPPLY42" gate="GND" pin="GND"/>
-<wire x1="-355.6" y1="-22.86" x2="-353.06" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="-408.94" y1="38.1" x2="-406.4" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$6" gate="G$1" pin="GND.2"/>
@@ -16719,8 +16722,8 @@ p=vi=5*13.6mA=68.18mW</text>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="V+"/>
-<wire x1="-355.6" y1="-17.78" x2="-353.06" y2="-17.78" width="0.1524" layer="91"/>
-<label x="-363.22" y="-15.24" size="1.778" layer="95"/>
+<wire x1="-408.94" y1="43.18" x2="-406.4" y2="43.18" width="0.1524" layer="91"/>
+<label x="-416.56" y="45.72" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="R18" gate="G$1" pin="A"/>
@@ -17166,8 +17169,8 @@ p=vi=5*13.6mA=68.18mW</text>
 <net name="A_WHAM" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="V"/>
-<wire x1="-353.06" y1="-20.32" x2="-363.22" y2="-20.32" width="0.1524" layer="91"/>
-<label x="-370.84" y="-17.78" size="1.778" layer="95"/>
+<wire x1="-406.4" y1="40.64" x2="-416.56" y2="40.64" width="0.1524" layer="91"/>
+<label x="-424.18" y="43.18" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U$5" gate="G$1" pin="18/A4/T/SDA"/>
