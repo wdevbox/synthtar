@@ -8215,6 +8215,10 @@ Based on the following sources:
 <text x="20.32" y="45.72" size="1.778" layer="91">according to the docs I actually do not, cool</text>
 <text x="33.02" y="10.16" size="1.778" layer="91">less than 1mA idle current, about 10mA when transmitting</text>
 <text x="33.02" y="7.62" size="1.778" layer="91">(5v-.7)/(220+220 (other side))=9.75mA</text>
+<text x="12.7" y="-22.86" size="1.778" layer="91">leave no floating inputs!</text>
+<text x="12.7" y="-25.4" size="1.778" layer="91">could also tie to ground...</text>
+<text x="12.7" y="-27.94" size="1.778" layer="91">should I use a buffer here?...</text>
+<text x="12.7" y="-30.48" size="1.778" layer="91">seems wasteful to not use all of these ports</text>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="63.5" y="25.4"/>
