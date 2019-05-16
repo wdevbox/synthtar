@@ -8251,7 +8251,7 @@ Based on the following sources:
 <text x="86.36" y="63.5" size="1.778" layer="97">midi out</text>
 <text x="93.98" y="10.16" size="1.778" layer="91">thinking about replacing this midi jack with usb midi functionality</text>
 <text x="96.52" y="5.08" size="1.778" layer="97">or having both!</text>
-<text x="20.32" y="43.18" size="1.778" layer="91">need to invert this first!~ optocoupler inverts on the other side</text>
+<text x="20.32" y="48.26" size="1.778" layer="91">need to invert this first! optocoupler inverts on the other side</text>
 <text x="22.86" y="55.88" size="1.778" layer="91">tie all inputs together to avoid floating?</text>
 <text x="68.58" y="-10.16" size="1.778" layer="91">can't drive from nand because my nands can't source enough current!</text>
 <text x="68.58" y="-12.7" size="1.778" layer="91">do let's make a nand inverter and put it through the &amp; gate that can?</text>
@@ -8260,7 +8260,7 @@ Based on the following sources:
 <text x="68.58" y="-22.86" size="1.778" layer="91">or an inverting comparator?</text>
 <text x="132.08" y="-20.32" size="1.778" layer="91">uses 2.8mA max, 1.7mA avg</text>
 <text x="-10.16" y="68.58" size="1.778" layer="91">just go with what you have for now, you're running out of time</text>
-<text x="20.32" y="45.72" size="1.778" layer="91">according to the docs I actually do not, cool</text>
+<text x="20.32" y="45.72" size="1.778" layer="91">^ according to the docs I actually do not, cool</text>
 <text x="33.02" y="10.16" size="1.778" layer="91">less than 1mA idle current, about 7mA when transmitting</text>
 <text x="33.02" y="7.62" size="1.778" layer="91">(5v-2v)/(220+220 (other side))=6.8mA</text>
 <text x="12.7" y="-22.86" size="1.778" layer="91">leave no floating inputs!</text>

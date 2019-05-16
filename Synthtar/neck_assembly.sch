@@ -462,8 +462,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="100.33" y1="6.35" x2="100.33" y2="74.93" width="0.1524" layer="97"/>
 <wire x1="100.33" y1="74.93" x2="36.83" y2="74.93" width="0.1524" layer="97"/>
 <text x="80.01" y="72.39" size="1.778" layer="97">NECK BUTTONS</text>
-<text x="92.71" y="59.69" size="1.778" layer="91">replace these with headers, the switches will be mounted externally</text>
-<text x="92.71" y="57.15" size="1.778" layer="91">2 pin headers</text>
+<text x="97.79" y="59.69" size="1.778" layer="91">headers, the switches will be mounted externally</text>
+<text x="97.79" y="57.15" size="1.778" layer="91">2 pin headers</text>
 <text x="92.71" y="45.72" size="1.778" layer="91">diodes on board so switches have no polarity</text>
 <text x="2.54" y="50.8" size="1.778" layer="91">ribbon cable? maybe</text>
 </plain>

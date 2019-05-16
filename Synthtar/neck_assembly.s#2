@@ -465,6 +465,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <text x="92.71" y="59.69" size="1.778" layer="91">replace these with headers, the switches will be mounted externally</text>
 <text x="92.71" y="57.15" size="1.778" layer="91">2 pin headers</text>
 <text x="92.71" y="45.72" size="1.778" layer="91">diodes on board so switches have no polarity</text>
+<text x="2.54" y="50.8" size="1.778" layer="91">ribbon cable? maybe</text>
 </plain>
 <instances>
 <instance part="D1" gate="G$1" x="44.45" y="46.99" rot="R270"/>

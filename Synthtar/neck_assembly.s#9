@@ -817,6 +817,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <text x="80.01" y="72.39" size="1.778" layer="97">NECK BUTTONS</text>
 <text x="92.71" y="59.69" size="1.778" layer="91">replace these with headers, the switches will be mounted externally</text>
 <text x="92.71" y="57.15" size="1.778" layer="91">2 pin headers</text>
+<text x="92.71" y="45.72" size="1.778" layer="91">diodes on board so switches have no polarity</text>
 </plain>
 <instances>
 <instance part="S5" gate="1" x="44.45" y="59.69" rot="R180"/>
